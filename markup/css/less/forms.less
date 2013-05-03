@@ -1,0 +1,616 @@
+/* FORMS */
+input,
+select, 
+textarea {
+  background: @white;
+  color:@greyFontDark;
+  border:1px solid @greyDarker;
+  .rounded-corners;
+  font-family: @Sans;
+  padding:0;
+  width: 232px;
+  margin-bottom: @marginBig;
+}
+input,
+select {
+  padding:7px 5px 7px 10px; 
+}
+select {
+  height: 35px;
+}
+input {
+  width: 217px;
+}
+input[type="radio"] {
+  width: auto;
+  padding:0;
+  margin: 0 5px 0 0;
+  height: auto;
+  border: none;
+}
+input[type="checkbox"] {
+  padding:0;
+  border:none;
+}
+form label {
+  display: block;
+  color: @greyFont;
+  font-style: italic;
+  font-size: 12px;
+  padding-bottom: @marginSmall;
+  clear: both;
+}
+small.mandatory {
+  color: @greyFont;
+  display: block;
+  clear: both;
+  font-style: italic;
+  font-size: 0.9em;
+}
+.imobiliarias small.mandatory {
+  color: @white;
+  margin:0 20px 10px 20px;
+}
+.inputWrapper {
+  .rounded-corners;
+  background-color: @white;
+  margin: 0 0 @margin 0;
+  width: auto;
+  border:1px solid @greyDarker;
+  overflow: hidden;
+  padding: 0;
+}
+.inputWrapper input,
+.inputWrapper select, 
+.inputWrapper textarea {
+  background-color: @white;
+  color: @greyFontDark;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 0;
+  padding: 10px;
+  width: 100%;
+}
+.inputWrapper select {
+  padding: 7px;
+}
+.inputWrapper textarea {
+  height: 76px;
+  padding:@margin;
+}
+.inputWrapper.name,
+.inputWrapper.pass,
+.inputWrapper.rePass,
+.inputWrapper.newPass,
+.inputWrapper.mail,
+.inputWrapper.reMail,
+.inputWrapper.company,
+.inputWrapper.creci,
+.inputWrapper.city {
+  padding: 0 15px 0 30px!important;
+}
+.inputWrapper.comments {
+  margin-bottom: 13px;
+  padding: 0;
+}
+.inputWrapper.name {
+  background: @white url(../../img/core/icn_form_name.png) no-repeat 10px top;
+}
+.inputWrapper.pass {
+  background: @white url(../../img/core/icn_form_pass.png) no-repeat 10px top;
+}
+.inputWrapper.rePass {
+  background: @white url(../../img/core/icn_form_re_pass.png) no-repeat 15px top;
+}
+.inputWrapper.newPass {
+  background: @white url(../../img/core/icn_form_new_pass.png) no-repeat 15px top;
+}
+.inputWrapper.mail {
+  background: @white url(../../img/core/icn_form_mail.png) no-repeat 11px top;
+}
+.inputWrapper.reMail {
+  background: @white url(../../img/core/icn_form_re_mail.png) no-repeat 5px top;
+}
+.inputWrapper.reMail.error {
+  background-position: 5px bottom!important;
+}
+.inputWrapper.company {
+  background: @white url(../../img/core/icn_form_company.png) no-repeat 10px top;
+}
+.inputWrapper.city {
+  background: @white url(../../img/core/icn_form_city.png) no-repeat 10px top;
+}
+.inputWrapper.corretor {
+  background: @white url(../../img/core/icon_corretor.png) no-repeat 7px 4px;
+}
+.inputWrapper.creci {
+  background: @white url(../../img/core/icn_form_creci.png) no-repeat 10px top;
+}
+.inputWrapper.search {
+  background: @greyLight url(../../img/core/icn_form_search.png) no-repeat 15px top;
+}
+.inputWrapper.error {
+  background-color: @errorBG!important;
+  background-position: 10px bottom!important;
+  margin-bottom: 5px;
+}
+.inputWrapper.error input, 
+.inputWrapper.error textarea,
+.inputWrapper.error select {
+  background-color: @errorBG!important;
+}
+form .errorMsg {
+  color: @errorFont!important;
+  clear: both;
+  font-size: 11px!important;
+  font-style: italic;
+  line-height: 12px;
+  margin-bottom: 10px!important;
+  text-align: left!important;
+}
+.contactForm .errorMsg {
+  color: @orangeLighter!important;
+}
+.imobiliarias .contact .errorMsg {
+  color:@errorFont2!important;
+}
+.imobiliarias .contact .inputWrapperTel .errorMsg {
+  width: 198px;
+}
+/*  SEARCH IN HOMEPAGE */
+#buscadores input {
+  background-color: @greyLight;
+  font-size: 1.2em;
+}
+#buscadores select {
+  height: 30px;
+  padding: 5px 5px 5px 7px;
+}
+#buscadores label {
+  font-weight: bold;
+}
+#buscadores .ac_input {
+  width: 232px;
+}
+.data {
+  margin-bottom: @marginSmall;
+}
+.mapSelection {
+  background: url(../../img/core/spriteGeneral.png) no-repeat -13px -112px;
+  cursor: pointer;
+  display: block;
+  float: right;
+  font-size: .8em;
+  line-height: 13px;
+  margin: 0 5px;
+  outline: 0;
+  padding: 0 0 5px 37px;
+  width: 55px;
+}
+.rooms,
+.area {
+  float: left;
+}
+.area {
+  margin-left: @marginSmall;
+}
+.rooms select,
+.area select {
+  width: 115px;
+  font-size: 0.95em;
+}
+.submit {
+  width: 33px;
+  height: 33px;
+  position: absolute!important;
+  margin-left: -35px;
+  margin-top: 2px;
+}
+.buscaID {
+  margin-top: 20px;
+}
+.buscaID p {
+  font-style: italic;
+  color: #999999;
+}
+#buscadores .buscaID input[type="submit"].submit {
+  .no-button;
+  background: url(../../img/core/spriteGeneral.png) no-repeat -5px -49px;
+  filter: none; /* IE6-9 */
+}
+
+#buscadores .propertyId {
+  font-size: 1.0em;
+}
+
+/*  SEARCH IN LANDING PAGES */
+.search {
+  padding-bottom: @margin!important;
+}
+.search label {
+  font-weight: bold;
+}
+.search .data {
+  float:left;
+  width:23%;
+  margin-right: @margin * 2;
+}
+.search select {
+  width: 100%;
+  height: 30px;
+  padding: 5px 5px 5px 7px;
+}
+.search input {
+  margin-bottom: 0;
+}
+.search .srchButton {
+  float: right;
+  width: 200px;
+  margin-top:15px;
+}
+
+/*  ERROR EN CONTACTO EN DETALLE */
+.msgs p {
+  background: #FFFF80;
+  font-size: 0.85em;
+  margin: 0 0 5px;
+  padding: 3px;
+  text-align: center;
+}
+
+/* @group CONTACT FORM In Developments*/
+.contactForm,
+.popupContainer .contactForm {
+  clear: both;
+  .darkGrad;
+  padding: @margin*2;
+  margin: 0 0 @margin*2;
+  color: @greyFontlight;
+}
+.contactAgent .contactForm { /* para el formulatio de contacto en detalle de usado*/
+  margin:0;
+  padding: 0;
+}
+.popupContainer .contactForm {
+  margin:0;
+  width:auto;
+  background: @white;
+  padding: 0;
+}
+.contactForm h3,
+.contentCol .contactForm h3 {
+  color: @greyFontBrighter;
+  float: left;
+  font-family: @Sans;
+  font-size: 1.25em;
+  font-weight: normal;
+  line-height: 22px;
+  margin: 0;
+  padding: 0;
+}
+.contactForm .btnOnlineChat {
+  display: inline-block;
+  font-size: .8em;
+  margin: 8px 0 0 10px;
+}
+.contactForm label {
+  color: @greyFontBrighter;
+}
+.contactForm select {
+  width: 100%;
+}
+.contentCol .contactForm fieldset {
+  padding: 20px 0 0 0;
+  clear: both;
+}
+.contactForm .col {
+  margin: 0 @margin*2 @marginBig 0;
+  width: 48%;
+}
+.contactForm .col.right {
+  float: right;
+  margin-right: 0;
+}
+.contactForm .btnSet {
+  display: block;
+  clear: both;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+  .contactForm header .btnSet {
+    width: 70%;
+  }
+  .contactForm .btnSet.secondary {
+    float: right;
+  }
+    .contactForm .btnSet.secondary .btn {
+      float: right;
+    }
+.inputWrapperTel,
+.inputWrapperDDD {
+  float: left;
+}
+.inputWrapperDDD {
+  margin-right: 20px;
+  position: relative;
+}
+.inputWrapperDDD:after {
+  content: '-';
+  color: @grey;
+  bottom: 0;
+  right: -@marginBig;
+  margin: 0 3px 22px 0;
+  position: absolute;
+}
+.imobiliarias .inputWrapperDDD:after {
+  color: @blueFont;
+}
+.inputWrapperDDD .inputWrapper {
+  padding: 0!important;
+  width: 40px!important;
+}
+.inputWrapperDDD .inputWrapper input { 
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+}
+.inputWrapperTel .inputWrapper {
+  width: 208px!important;
+}
+.publicarInmuebles .inputWrapperTel .inputWrapper {
+  width: 190px!important;
+} 
+.contactForm .btnSet small {
+  display: block;
+  color: @greyFontlighter;
+  font-size: 0.8em;
+  padding: 0;
+  text-align: center;
+  line-height: 1.0em;
+  font-family: @Sans;
+}
+
+/* @group ASIDE FORM */
+aside .contactForm {
+  margin: -150px 0 0;
+  padding: @margin @margin*2 @marginBig;
+  width: auto;
+}
+.developments aside .contactForm {
+  margin-top: -110px;
+}
+aside .contactForm h3 {
+  float: none;
+  font-size: 1.3em !important;
+  padding: 0 0 @marginBig 0;
+  text-align: center;
+}
+aside .contactForm header .btn {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+aside .contactForm header p {
+  font-size:12px;
+  clear: both;
+  text-align:center;
+  margin: 0;
+  padding: 7px 0;
+  display: none;
+  background: url(../../img/core/bg-or-aside.png) no-repeat center;
+}
+aside .contactForm .labelOpt {
+  display: none;
+}
+aside .contactForm .col {
+  margin: 0;
+  width: 100%;
+}
+aside .inputWrapperTel .inputWrapper {
+  width: 195px!important;
+}
+aside .contactForm p small {
+  padding: @margin 0 0;
+  text-align: center;
+}
+
+aside .contactForm .optOut {
+  text-align: left;
+}
+  aside .contactForm .optOut input {
+    float: left;
+    margin: 3px 5px 25px 0;
+  }
+
+.contactForm .optOut {
+  color: @greyDarker;
+  line-height: 1.5em;
+  margin: 0 0 15px;
+  white-space: normal;
+  text-align: center;
+}
+  .contactForm .optOut input {
+    margin: 0 5px 0 0;
+    width: auto;
+  }
+
+/*  order element in results  */
+.order .data label {
+  color:@white;
+  display: inline;
+  font-style: normal;
+}
+.order select {
+  border: solid 1px @greenDark;
+  background: lighten(@greenLighter, 20%);
+  color: @greenDark;
+  padding: 3px;
+  margin-left: @marginSmall;
+  font-size: 0.87em;
+  width: auto;
+  margin-bottom: 0;
+  height: 22px;
+}
+/*  END - order element in results  */
+/* FILTERS IN RESULTS PAGE */
+.navLstProp input,
+.navLstProp select {
+  background: lighten(@greyLight, 1%);
+  width: 180px;
+  margin: 5px 0;
+}
+.navLstProp select {
+  height: 25px;
+  padding: 3px 3px 3px 5px;
+}
+.navLstProp label {
+  padding-top: @margin;
+  font-weight: bold;
+}
+.navLstProp input[type="checkbox"] {
+  width: auto;
+  height: auto;
+}
+.navLstProp input[type="text"] {
+  float: left;
+  width: 82px;
+  padding: 3px;
+  color: @greyFont;
+  font-weight: normal;
+  font-size: .8em;
+  height: auto;
+  margin-right: 3px;
+}
+.navLstProp input[type="text"]:nth-of-type(even) {
+  float: right;
+  text-align: right;
+  margin-right: 0;
+}
+/* END - FILTERS IN RESULTS PAGE */
+/*  CONTACT IN WEB2LEAD  */
+.imobiliarias .contact form {
+  background: url(../../img/core/bg_form_blue.gif);
+  padding: 0 0 20px 0;
+  border: 1px solid #62A0BC;
+  border-top: none;
+  margin: 0 8px 0 11px;
+}
+.imobiliarias form .column {
+  float: left;
+  margin: 0 0 0 20px;
+  width: 260px;
+}
+.imobiliarias .contact form label, 
+.imobiliarias .contact form label a {
+  color: @white;
+  padding: 5px 0 5px;
+  font-size: 1.1em;
+}
+.imobiliarias .contact .inputWrapper {
+  border-color: @blueLine;
+}
+.imobiliarias .contact select {
+  width: 100%;
+  background: @white;
+  border-color:@blueLine;
+  height: 28px;
+  margin:0;
+  height: 35px;
+  padding: 8px;
+}
+.imobiliarias .contact .inputWrapperTel .inputWrapper {
+  width: 195px!important;
+}
+/*  END - CONTACT IN WEB2LEAD  */
+
+/* FORM IN WEB2LEAD - STEP 2*/
+
+.datos-adicionales form {
+  margin: 0 0 40px 50px;
+}
+.datos-adicionales fieldset {
+  padding-top: 20px;
+}
+.datos-adicionales fieldset p {
+  margin: 0;
+}
+.datos-adicionales form .column {
+  float: left;
+  width: 257px;
+  margin-right: 20px;
+  padding-bottom: 40px;
+}
+.datos-adicionales form .inputWrapperTel .inputWrapper {
+  width: 156px!important;
+}
+.datos-adicionales form .select-menus {
+  height: 52px;
+}
+
+/* END -F ORM IN WEB2LEAD - STEP 2*/
+/* FORM in REGISTRATION PAGE*/
+.publicarInmuebles .col.left form {
+  width: 600px;
+}
+.publicarInmuebles .col.left form .column {
+  width: 45%;
+  margin-right: 10px;
+}
+.publicarInmuebles .col.left form .ac_container input {
+  width: 94%;
+}
+/* END - FORM in REGISTRATION PAGE*/
+
+/* Email Notifications */
+
+#emailNotifications .datosBasicos label {
+  display: inline;
+}
+#emailNotifications .inputWrapper.mail {
+  width: 40%;
+}
+/* END Email Notifications */
+
+/*  En popup viejo  */
+#formPopCont input,
+#formPopCont select, 
+#formPopCont textarea {
+  padding: 5px;
+  font-size: 1.3em;
+}
+#formPopCont select {
+  height: 30px;
+  padding: 5px 5px 5px 10px;
+}
+#formPopCont .lightbox input,
+#formPopCont .lightbox select,
+#formPopCont .lightbox textarea {
+  width: 320px;
+}
+#formPopCont input[type="checkbox"] {
+  width: auto;
+  padding:0;
+}
+.topcities input[type="checkbox"] {
+  width: auto;
+  margin: 0 @marginSmall 0 0;
+  height: auto;
+}
+
+/* en Popup nuevo */
+.popupContainer .contactForm {
+  margin: 0;
+  width: auto;
+  background: white;
+  padding: 0;
+}
+.popupContainer form .errorMsg {
+  color: @errorFont!important;
+}
+.popupContainer .inputWrapper.comments textarea {
+  height: 90px;
+  color: @greyFont;
+}

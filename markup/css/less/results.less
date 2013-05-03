@@ -1,0 +1,526 @@
+
+/* ==========================================================================
+   Styles for Results Page
+   ========================================================================== */
+
+/* Results  */
+.navLstProp {
+  clear: none;
+}
+.navLstProp h3 {
+  background:@blue;
+  color: @white;
+  margin: -10px 0 0 -15px;
+  width: 100%;
+  padding: @margin @marginBig;
+  font-weight: normal;
+  .rounded-tabs;
+}
+.navLstProp li {
+  list-style: none;
+  margin-left: 0;
+}
+.navLstProp label {
+  clear: both;
+  color: @greyFont;
+  display: block;
+  font-size: 12px;
+  font-style: italic;
+  padding-bottom: @marginSmall;
+}
+
+/* Locations  */
+#seccionUbicaciones {
+  border-bottom: @hDivider1;
+}
+#seccionUbicaciones label {
+  padding-top: @margin;
+} 
+#seccionUbicaciones a.delete {
+  font-size: 0.8em;
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  background: url(../../img/core/delete.png) no-repeat 0 2px;
+}
+#seccionUbicaciones .selUbicAdd label {
+  float: left;
+}
+#seccionUbicaciones .btn {
+  float:right;
+  margin: @margin 0;
+}
+.navLstProp .resetFilter .btn {
+  width:auto;
+  display: block;
+  text-align: center;
+  margin: @margin 0 0 0;
+}
+.navLstProp .onlyPhoto {
+  border-top: @hDivider1;
+  clear: both;
+  margin-top: @margin;
+  padding-top: @margin; 
+}
+.navLstProp .onlyPhoto span {
+  font-size: 0.9em;
+  margin-left: @marginSmall;
+}
+.navLstProp .vertodos {
+  margin-top: @margin;
+} 
+.navLstProp .vertodos a {
+  font-size: 0.9em;
+  font-family: @Sans;
+}
+
+/* Slider  */
+.ui-slider {
+  .rounded-corners;
+  margin-left: @marginSmall;
+  width: 95%;
+  border: 1px solid @greyDarker;
+  background: @greyLight;
+  position:relative;
+}
+.ui-slider-range {
+  background: lighten(@blueLighter, 20%);
+  height: 5px;
+  border:1px solid @blueLighter;
+  position:relative;
+}
+.ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 12px;
+  height: 12px;
+  cursor: default;
+  margin-top:-9px;
+  margin-left: -8px;
+  background: url(../../img/core/spriteGeneral.png) no-repeat -13px -341px;
+}
+/* Pagination  */
+.order,
+.pagination {
+  .rounded-corners;
+  background: @green;
+  border: 1px solid @greenDark;
+  margin:@marginBig 0;
+  padding:@marginSmall @margin;
+  color: @white;
+  font-family: @Sans;
+}
+.order {
+  margin-top: 0;
+}
+.order .data {
+  float: left;
+  margin-bottom: 0;
+}
+
+.order p {
+  float:right;
+  margin:0;
+}
+.pagination a {
+  color:@white;
+  padding:3px;
+}
+.pagination .active {
+  .rounded-corners;
+  background: @greenLighter;
+  color: @green;
+  padding: @marginSmall;
+  font-weight: bold;
+}
+.no-touch .pagination a:hover {
+  color: fade(@white, 60%);
+}
+.pagination .prev,
+.pagination .next  {
+  float: left;
+  font-weight: bold;
+  padding: 0 0 0 @marginBig;
+  background: url(../../img/core/spritePagination.png) no-repeat 0 4px;
+  margin-top: 5px;
+}
+.pagination .prev.inactive,
+.pagination .next.inactive {
+  color:@greyFontDark;
+  background: url(../../img/core/spritePagination.png) no-repeat 0 -42px;
+}
+.pagination .next.inactive {
+  background: url(../../img/core/spritePagination.png) no-repeat right -65px;
+}
+.pagination .next {
+  float: right;
+  padding: 0 @marginBig 0 0;
+  background: url(../../img/core/spritePagination.png) no-repeat right -19px;
+}
+.pagination ul {
+  width: 370px;
+  margin: 0 auto;
+  padding: 5px;
+  text-align: center;
+}
+.pagination li {
+  display: inline;
+  margin: 0;
+}
+/* LIST ITEMS */
+.properties > li {
+  clear: both;
+  overflow: hidden;
+  border:1px solid @white;
+  border-bottom: @hDivider1;
+  padding: @marginBig @margin;
+  margin:0;
+}
+.no-touch .properties > li:hover {
+  background: @greyLighter;
+  border: 1px solid @green;
+}
+.properties .propertyInfo {
+  float: right;
+  width: 350px;
+}
+.propertyInfo li {
+  display: inline-block;
+  margin-left: @marginSmall;
+  padding-left: @marginBig;
+  background: url(../../img/core/spriteGeneral.png) no-repeat -13px -224px;
+}
+.propertyInfo h2 {
+  margin-top: 0;
+  font-size: 1.3em;
+  font-weight: bold!important;
+}
+.propertyInfo .status {
+  color: @greyFontlight;
+  font-style: italic;
+  display: block;
+  margin-bottom: @marginSmall;
+  font-size: 0.8em;
+}
+.propertyInfo .location,
+.propertyInfo h4 {
+  font-size: .8em;
+  color: @greyFont;
+  margin-top: 5px;
+  display: block;
+}
+.propertyInfo h4 {
+  font-family: @Sans;
+  font-size: 1.0em;
+  font-weight: normal;
+  color: @greyFontlight;
+}
+.propertyInfo .logoInm {
+  float: right;
+}
+.propertyInfo .logoInm img {
+  border: solid 1px @greyDark;
+  display: block;
+  width: 80px;
+  height: 37px;
+}
+.no-touch .propertyInfo a:hover {
+  text-decoration: none;
+}
+.propertyThumb {
+  float: left;
+  position: relative;
+}
+.propertyThumb img {
+  background: #F3F3ED url(../../img/core/noThumb.jpg) no-repeat center center;
+  display: block;
+  width: 160px;
+  height: 120px;
+  margin-left: @marginSmall;
+}
+.propertyThumb mark {
+  background: url(../../img/core/img-flag-dev-state-middle.png) repeat-x top;
+  bottom: -7px;
+  color: @white;
+  font-style: italic;
+  height: 22px;
+  line-height: 20px;
+  margin: 0 0 0 5px;
+  padding: 9px 0 0 5px;
+  position: absolute;
+  width: auto;
+}
+.hlisting.project  .propertyThumb mark:before {
+  background: url(../../img/core/img-flag-dev-mainstate-before.png) no-repeat top;
+  content: '';
+  display: block;  
+  height: 31px;
+  left:-4px;
+  margin: 1px 0 0 0;
+  padding: 0;
+  position: absolute;
+  top:0;
+  width: 4px;
+  z-index: 10;
+}
+.hlisting.project  .propertyThumb mark:after {
+  background: url(../../img/core/img-flag-dev-state-after.png) no-repeat top;
+  content: '';
+  display: block;
+  height: 31px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right:-18px;
+  top:0;
+  width: 18px;
+}
+.properties .PropertyDescription {
+  display: none;
+  clear: both;
+}
+.descripcionInmueble {
+  font-family: @Sans;
+  font-size: 0.9em;
+  color: @greyFontlight;
+}
+.properties .actions {
+  clear:both;
+}
+.properties .actions a {
+  float: right;
+  margin-left: @marginSmall;
+}
+.actions .expandirContraer.expandir {
+  background: url(../../img/core/spriteGeneral.png) no-repeat -13px -678px;
+  margin: 3px 0 0 5px;
+  padding: 4px 0 3px @margin * 2;
+  font-family: @Sans;
+  float: none;
+  display: inline-block;
+  font-size: 0.87em;
+}
+
+/* PROPIEDADES DESTACADAS */
+.newProjects {
+  .rounded-corners;
+  background: @greyLight;
+  padding: @margin;
+  overflow: hidden;
+  margin-bottom: @marginBig;
+}
+.featuredProps { 
+  overflow: hidden; 
+  margin-bottom:15px; 
+}
+.featuredProps .adSlot { 
+  width: 125px; 
+  height: 125px; 
+  float: left; 
+  margin: 0 10px 0 0; 
+}
+.featuredProps #lastAd { 
+  margin: 0 
+}
+
+#inmoView h2 {
+  margin: 0 0 @margin 0;
+  font-size: 2em;
+  border-bottom: @hDivider1;
+  padding-bottom: @marginSmall;
+}
+.nombreInm {
+  float: right;
+  width: 30%;
+  text-align: center;
+  padding: @margin;
+}
+.nombreInm img {
+  display: block;
+  margin: 0 auto 10px auto;
+}
+.datosInm {
+  float: left;
+  width: 65%;
+}
+#inmoInfo {
+  .rounded-corners;
+  background: @grey;
+  clear: both;
+  padding: @margin * 2 @margin * 2 0 @margin * 2;
+  border:1px solid @greyDark;
+}
+#accountContact h2 {
+  margin: 0 0 @margin 0;
+  font-size: 1.4em;
+}
+#accountContact .note {
+  margin-top: -5px;
+}
+#accountContact .col {
+  width: 230px;
+  margin-right: @marginSmall;
+}
+#accountContact textarea {
+}
+.iMap {
+  margin-right: @margin;
+}
+/* RESULTADOS DE INMOBILIARIAS */
+.cantidadInmobiliarias h2{
+  margin:0;
+  border-bottom: @hDivider1;
+  padding-bottom: @margin;
+}
+.inmobiliarias .hlisting {
+  list-style: none;
+  border-bottom: @hDivider1;
+  margin:0;
+  clear: both;
+  overflow: hidden;
+}
+.inmInfo {
+  padding: 0 0 @marginBig @margin;
+  float: left;
+  width: 60%;
+}
+.inmInfo h3 {
+  margin-top: @marginBig;
+}
+.inmInfo p {
+  margin: 0;
+}
+.inmLogo {
+  float:right;
+  width: 30%;
+  padding: 20px;
+}
+.inmLogo a {
+  float:right;
+}
+.inmLogo a img {
+  border:1px solid @grey;
+}
+.inmLogo a.btn {
+  margin-top: 5px;
+}
+.listNav {
+  clear: both;
+}
+/*   RESULTS BY ID    */
+#byIdListing {
+  width: 100%;
+}
+#idSearch .hlisting {
+  list-style: none;
+  float: left;
+  clear: none;
+  width: 440px;
+  height: 175px;
+}
+#idSearch .propertyInfo {
+  width: 260px;
+}
+#idSearch .actions {
+  display: none;
+}
+#idSearch .even {
+  float: right;
+  clear: right;
+  margin: 0 15px 15px 0;
+}
+#idSearch .odd {
+  float: left;
+  clear: left;
+  margin: 0 15px 15px 0;
+}
+
+.inmDestacada {
+  display: none;
+}
+
+
+
+
+/***********************************************************************/
+
+.filterSearch {
+  background-color: @greyDarkBG2;
+
+  .fs_title {
+    background-color: @greyDarkBG1;
+    color: @greyFontBright;
+    font: italic 400 1.25em/2.5em @Serif;
+    margin: 0;
+    padding-left: 15px;
+  }
+
+  .fs_section {
+    color: @white;
+    font: 1em @Sans;
+    padding: 15px;
+    position: relative; 
+  }
+  .fs_section:before,
+  .fs_section:after {
+    background-color: fadeout(@darkDark, 60%);
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  .fs_section:after {
+    background-color: fadeout(@white, 90%);
+    top: 1px;
+  }
+
+  .fs_section_title {
+    font-weight: 400;
+
+    
+  }
+
+  .fs_section_content {
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

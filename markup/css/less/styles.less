@@ -1,0 +1,1586 @@
+@import url("normalize.less");
+@import url("mixins.less");
+@import url("buttons.less");
+@import url("forms.less");
+@import url("popups.less");
+@import url("http://fonts.googleapis.com/css?family=Droid+Sans:400,700");
+@import url("http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic");
+
+/*Estilos globales*/
+body {
+  font-family: @Serif;
+  font-size: 0.8em;
+  color: @greyFontDark;
+  margin: 0;
+  /*min-width: 1000px;*/
+}
+.wrapped {
+  width: 980px;
+  margin: 0 auto;
+  padding: 0 0 20px 0;
+  position: relative;
+}
+.hasShareBar .wrapped {
+  width: 950px;
+  padding-left: 45px;
+}
+.triggit {
+  float: left;
+  height: 0;
+  width: 0;
+
+  iframe {
+    float: left;
+    height: 0;
+    width: 0;
+  }
+}
+
+.placeholder {
+  color: @black3;
+}
+
+/*
+ * Addresses font sizes and margins set differently in IE 6/7.
+ * Addresses font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * and Chrome.
+ */
+h1 {
+  margin: 1.1em 0;
+  font-size: 1.8em;
+  font-weight: normal;
+  clear:both;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 1.2em 0 0.83em 0;
+}
+h3 {
+  font-size: 1.2em;
+  margin: 30px 0 10px;
+  color: @blueLight;
+}
+/*h3 {
+  font-size: 1.2em;
+  color: @blueLight;
+  margin: 30px 0 10px;
+  font-style: italic;
+}*/
+h4 {
+  font-size: 1em;
+  margin: 0.3em 0;
+}
+h5 {
+  font-size: 0.83em;
+  margin: 0.3em 0;
+}
+h6 {
+  font-size: 0.75em;
+  margin: 0.3em 0;
+}
+p {
+  font-family: @Serif;
+  line-height: 1.5em;
+}
+a {
+  color: @green;
+  cursor: pointer;
+  line-height: 1.2em;
+  text-decoration: none;
+}
+a:focus,
+.no-touch a:hover {
+  color: @greenLighter;
+  text-decoration: underline;
+}
+sup {
+  font-size: 9px;
+  top: -0.3em;
+  /*vertical-align: top;*/
+}
+.floatR {
+  float: right;
+}
+.floatL {
+  float: left;
+}
+.location {
+  font-style: italic;
+  font-family: @Serif;
+  font-weight: normal;
+}
+.note {
+  font-style: italic;
+  font-size: 0.8em;
+  color: @greyFontlight;
+}
+.col,
+.column {
+  float:left;
+}
+.col.right {
+  float:right;
+}
+.col.short {
+  width: 220px;
+}
+.col.small {
+  width: 300px;
+}
+.col.big {
+  width: 660px;
+}
+.col.small2 {
+  width: 186px;
+}
+.col.big2 {
+  width: 750px;
+  margin-bottom: @marginBig;
+}
+.halfLeft,
+.halfRight {
+  width:49.3%;
+}
+.halfRight {
+  float: right;
+}
+.mainContent {
+  float: left;
+  width: 550px;
+}
+aside {
+  float: right;
+  width: 180px;
+}
+li {
+  list-style: disc outside;
+  margin:3px 0 0 @marginBig;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+#breadcrumb {
+  background: @greyLight;
+  padding: 5px 10px;
+  margin: 10px 0;
+  border: solid 1px @greyDark;
+  float: left;
+  .rounded-corners;
+  font-size: 0.85em;
+}
+#breadcrumb li {
+  font-family: @Sans;
+  display: inline-block;
+  list-style: none;
+  padding: 1px 15px 1px 0;
+  background: url(../../img/core/separadorBreadcrumb.png) no-repeat right 0;
+  margin: 0 5px 0 0;
+}
+#breadcrumb #breadLast {
+  margin-right: 0;
+  padding-right: 0;
+  background: none;
+}
+
+/* TABS */
+.tabs li {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  .rounded-tabs;
+  background: @blue;
+  border:1px solid @blueDark;
+  border-bottom: none;
+  font-family: @Sans;
+  font-weight: bold;
+  margin:0;
+}
+.no-touch .tabs li:hover {
+  background: @blueDark;
+  border:1px solid @blueDark;
+  border-bottom: none;
+}
+.tabs li.active,
+.no-touch .tabs li.active:hover {
+  background: @white;
+  border:none;
+}
+.tabs li a {
+  color:@white;
+  padding: 11px 15px 12px;
+  display: block;
+}
+.no-touch .tabs li a:hover {
+  color: lighten(@blueLighter,20%);
+}
+.tabs li.active a,
+.no-touch .tabs li.active a:hover  {
+  color:@blue;
+}
+.multimedia .tabs li.active,
+.no-touch .multimedia .tabs li.active:hover {
+  border:1px solid @greyDark;
+  border-bottom: none;
+}
+/* BOXES */
+.tagCloud,
+.proxioCTA,
+.ciudadesMasBuscadas,
+.popularCities,
+.whiteBox,
+.mostWanted,
+.carrusel,
+.navLstProp,
+.likeButtons,
+.busquedaRelacionada,
+.publish,
+.notifications,
+.newProject,
+.inmDestacada,
+.search,
+.mapaBusqueda,
+.destacados,
+.searches,
+.mapInmobiliarias,
+.property,
+.similarProperties,
+.similarProps,
+.caracteristicasAdicionales,
+.contactAgent,
+.datosBasicos,
+.siteLnk,
+.greyBox {
+  margin:0;
+  .rounded-corners;
+  padding: @margin @marginBig @marginBig @marginBig;
+  color:@greyFontDark;
+  width: auto;
+  background: @greyLight2;
+  margin: 0 0 @marginBig 0;
+  clear:both;
+}
+.whiteBox {
+  background: @white;
+  margin:0;
+  clear: none;
+}
+.contactAgent {
+  background: #E4EFFF;
+}
+
+.proxioCTA h2,
+.likeButtons h2,
+.busquedaRelacionada h2,
+.similarProperties h2,
+.similarProps h2,
+.caracteristicasAdicionales h2,
+.busquedasRelacionadas h2,
+.siteLnk h2,
+.recoSites h2,
+.tagCloud h3,
+.popularCities h3,
+.ciudadesMasBuscadas h3,
+.destacados h3,
+.mapaBusqueda h3,
+.searches h3,
+.mapInmobiliarias h3,
+.inmDestacada h3,
+.greyBox h3,
+.carrusel h3,
+.whiteBox2 h3 {
+  font-weight: normal;
+  border-bottom: @hDivider1;
+  padding-bottom: @marginSmall;
+  font-weight: normal;
+  margin: 0 0 0.3em 0;
+  color:@greyFontDark;
+  font-size: 1.5em;
+  font-style: normal;
+}
+.contactAgent h2 {
+  background: @blue;
+  width: 100%;
+  margin: -10px 0 15px -15px;
+  padding: 10px 15px;
+  font-weight: normal;
+  color: @white;
+  .rounded-tabs;
+}
+.card {
+  background: @grey url(../../img/core/bg-paper-texture-1.jpg) repeat top left;
+  padding: @margin @margin * 2;
+  position: relative;
+  border: 1px solid @grey;
+  margin-bottom: @marginBig;
+}
+.similarProperties {
+  overflow: hidden;
+}
+.whiteBox2 {
+  background: @greyLight;
+  padding: 15px 10px;
+  overflow: hidden;
+  clear: both;
+  border: 1px solid @grey;
+}
+.whiteBox2 {
+  background: @white;
+}
+.greyBox header,
+.whiteBox2 header {
+  background:@greyLight url(../../img/core/img-thumbs-units-spit.png) center bottom no-repeat;
+  height: inherit;
+  margin: -19px -10px 0;
+  padding: 15px 0 15px 10px;
+}
+.whiteBox2 h3 {
+  border-bottom: none;
+
+}
+.greyBox header a,
+.whiteBox2 header a {
+  font-size: 1.3em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* SEO */
+.description {
+  clear: both;
+  font-size: 0.9em;
+  color:@greyFontlight;
+  border-top: @hDivider1;
+  padding: @margin @marginBig;
+}
+.description h2{
+  font-size: 1.3em;
+  color:@greyFont;
+}
+
+/* CAROUSEL */
+.carrusel {
+  clear: both;
+}
+#carouselWrapper {
+  display: block!important;
+  height: 90px;
+  position: relative;
+  width: 100%;
+}
+#carouselWrapper ul {
+  margin-left: 20px;
+  width: 930px;
+}
+.sliderTopInmobiliarias.loading {
+  background: url(../../img/core/spinner_20x20.gif) no-repeat center center; 
+}
+.sliderTopInmobiliarias li {
+  list-style: none;
+  background-color: @white;
+  border: 1px solid @greyDarker;
+  float: left;
+  height: 65px;
+  overflow: hidden;
+  padding: 9px;
+  margin: 7px 5px 7px 7px;
+  width: 119px;
+}
+.sliderTopInmobiliarias li a {
+  color: @greyFontDark;
+}
+.sliderTopInmobiliarias li a img {
+  width: 119px;
+}
+.sliderTopInmobiliarias .prev,
+.sliderTopInmobiliarias .next {
+  width: 22px;
+  height: 27px;
+  overflow: hidden;
+  position: absolute;
+  top: 30px;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+.sliderTopInmobiliarias .prev {
+  left: -5px;
+  background: url("../../img/core/spriteGeneral.png") no-repeat scroll -14px -1438px;
+}
+.sliderTopInmobiliarias .next {
+  right: -5px;
+  background: url("../../img/core/spriteGeneral.png") no-repeat scroll -14px -1414px;
+}
+.contentCarrusel {
+  width: 2000px;
+}
+.contentCarrusel li {
+  list-style: none;
+  margin: 0 20px 0 0;
+  float: left;
+}
+.contentCarrusel li a {
+  display: block;
+}
+.contentCarrusel li img {
+  float: left;
+}
+.contentCarrusel li .carInm {
+  float: left;
+  margin: 0 0 0 @margin;
+  width: 130px;
+}
+.contentCarrusel li .carInm span,
+.contentCarrusel li .carInm strong {
+  font-weight: bold;
+  display: block;
+}
+.contentCarrusel li .carInm strong {
+  color: @green;
+}
+
+/* TAGCLOUDS */
+.tagCloud li,
+.horizontalList li {
+  display: inline;
+  margin: 0 1px 0 0;
+}
+.tagCloud a {
+  padding:@marginSmall 0;
+}
+.tagCloud .tag-10 { font-size: 0.8em; font-weight: 100; }
+.tagCloud .tag-20 { font-size: 0.8em; font-weight: 200; }
+.tagCloud .tag-30 { font-size: 0.9em; font-weight: 300; }
+.tagCloud .tag-40 { font-size: 1.0em; font-weight: 300; }
+.tagCloud .tag-50 { font-size: 1.0em; font-weight: 400; }
+.tagCloud .tag-60 { font-size: 1.1em; font-weight: 400; }
+.tagCloud .tag-70 { font-size: 1.2em; font-weight: 500; }
+.tagCloud .tag-80 { font-size: 1.3em; font-weight: 600; }
+.tagCloud .tag-90 { font-size: 1.3em; font-weight: 600; }
+.tagCloud .tag-100 { font-size: 1.4em; font-weight: 700; }
+.tagCloud .tag-110 { font-size: 1.5em; font-weight: 800; }
+.tagCloud .tag-120 { font-size: 1.6em; font-weight: 900; }
+
+/* DESTACADOS */
+.destacados ul {
+  list-style: none;
+  padding-top: @margin;
+} 
+.destacados li {
+  display: inline-block;
+  margin: 0 @marginBig @marginBig 0;
+}
+.destacados li a {
+  display: block;
+  border: 1px solid @greyDark;
+}
+.destacados li img {
+  display: block;
+}
+/* CARD */
+.card dt {
+  margin: 0 0 3px 0;
+  color: @greyFontlight;
+  font-size: 0.85em;
+}
+.card dd {
+  color: @greyFont;
+  font-size: 1.0em;
+  font-weight: bold;
+  margin: 0 0 @margin 0;
+}
+.card dd a {
+  font-size: 0.9em;
+  font-weight: normal;
+}
+
+/* LISTS */
+.horizontalList {
+  clear:both;
+}
+.horizontalList li {
+  font-size: 1.1em;
+  margin-right: @marginBig;
+}
+.mostWanted {
+  background-color: @white;
+  padding: @margin;
+}
+.listaCiudades ul,
+.tags ul {
+  list-style: none;
+}
+.listaCiudades ul h3 {
+  display: inline-block;
+  font-size: 1.0em;
+  margin:3px 0;
+  border: none;
+  padding:0;
+}
+.listaCiudades ul h3 a:after {
+  content:" >";
+  color: @greyDark;
+  margin-left: @marginSmall;
+}
+.listaCiudades ul li,
+.tags ul li {
+  margin:0;
+}
+.listaCiudades > ul > li,
+.tags > ul > li {
+  display: block;
+  border-bottom: @hDivider1;
+  padding: 2px 0;
+}
+.searches .listaCiudades > ul > li,
+.tags > ul > li {
+  display: inline-block;
+  border-bottom:none;
+  margin: 0 @marginSmall 3px 0;
+}
+.listaCiudades ul ul > li,
+.listaCiudades ul ul {
+    display: inline-block;
+}
+.listaCiudades ul a,
+.tags ul a {
+  .rounded-corners;
+  background: @white;
+  display: block;
+  padding:3px @marginSmall;
+}
+.listaCiudades ul ul > li a{
+  background: fade(@white, 65%);
+}
+.no-touch .listaCiudades ul a:hover,
+.no-touch .tags ul a:hover {
+  background-color: @greenLighter;
+  color:@white;
+  text-decoration: none;
+}
+.caracteristicasAdicionales li {
+  float: left;
+  margin: 0 0px 0 17px;
+  padding: 3px 0;
+  list-style-image:url('../../img/core/bullet_1.png');
+  width: 22%;
+}
+.similarProps ul {
+  padding-top: @marginSmall;
+}
+.similarProps li {
+  list-style: none;
+  display: inline-block;
+  width: 17%;
+  margin: 0 3% 0 0;
+  vertical-align: text-top;
+}
+.similarProps li:last-child {
+  margin-right: 0;
+}
+.similarProps li p {
+  margin:0;
+}
+.similarProps li a {
+  display: block;
+  color: @greyFont;
+}
+.similarProps li a strong {
+  color:@green;
+  display: block;
+}
+ul .itemName {
+  clear: both;
+  font-size: 0.9em;
+  font-style: italic;
+}
+ul .itemPrice {
+  font-size: 0.8em;
+}
+ul .itemInfo,
+ul .itemPrice {
+  font-family: @Sans;
+}
+ul .itemInfo {
+  font-size: 0.9em;
+}
+
+ul .itemPrice,
+ul .itemName strong {
+  color: @blueFont;
+  font-family: @Serif;
+}
+.similarProjects .itemPrice,
+.similarProjects .itemName strong {
+  color: @orangeLighter;
+}
+.similarProjects .itemPrice strong {
+  display: block;
+  font-size: 1.6em;
+}
+ul .development .imgWrapper {
+  background: url(../../img/core/bg-dev-img.png) top left no-repeat;
+  float: left;
+  height: 86px;
+  margin: 0 10px 0 0;
+  overflow: hidden;
+  padding: 4px 4px 10px 10px;
+  position: relative;
+  width: 111px;
+}
+ul .imgWrapper mark {
+  background: url(../../img/core/img-flag2-dev-state-before.png) top left no-repeat;
+  bottom: -1px;
+  font-family: @Serif;
+  font-style: italic;
+  left: -4px;
+  margin: 0;
+  padding-left: 4px;
+  position: absolute;
+}
+ul .imgWrapper.inv mark {
+  background-image: url(../../img/core/img-flag2-dev-state-before-inv.png);
+  bottom: auto;
+  top: -7px;
+}
+ul .imgWrapper mark span {
+  background: url(../../img/core/img-flag2-dev-state.png) top right no-repeat;
+  color: @white;
+  font-size: 0.9em;
+  font-weight: 400;
+  float: left;
+  height: 23px;
+  line-height: 21px;
+  overflow: hidden;
+  padding: 0 12px 0 5px;
+}
+ul .imgWrapper.inv mark span {
+  background-image: url(../../img/core/img-flag2-dev-state-inv.png);
+}
+ul.alphUl {
+  list-style: none;
+  padding:@marginSmall 0 @margin 0;
+}
+ul.alphUl li {
+  display: inline-block;
+  margin-right: @marginSmall;
+}
+ul.alphUl li a {
+  background: @green;
+  color:@white;
+}
+
+
+/* AutoComplete */
+.ac_container {
+  position: relative;
+}
+.ac_results {
+  background: @white;
+  border: solid 1px @greyDarker;
+  display: none;
+  font-family: @Sans;
+  font-size: 0.9em;
+  padding: 0 @margin @margin;
+  position: absolute;
+  top: 0;
+  width: 250px!important;
+  z-index: 1000;
+}
+.justifyLeft .ac_results {
+  left: 0;
+}
+.justifyRight .ac_results {
+  right: 0;
+}
+.ac_results > div {
+  cursor: pointer;
+  font-weight: bold;
+  color: @green;
+   padding: 2px 0;
+}
+.ac_results .ac_over,
+.no-touch .ac_results div:hover {
+  background: @greyLight2;
+}
+.ac_results .titNivel {
+  color:@greyFontDark;
+  padding:0 0 5px 0;
+  margin: 10px 0 3px 0;
+  border-bottom: @hDivider1;
+  cursor: default;
+}
+.no-touch .ac_results .titNivel:hover {
+  background: none;
+}
+.ac_results .infoP {
+  color:@greyFont;
+  font-weight: normal;
+}
+.ac_input {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+}
+.hasSpinner {
+  background-image: url(../../img/core/spinner_20x20.gif);
+  background-position: 99% 50%;
+  background-repeat: no-repeat;
+  padding-right: 25px !important;
+}
+
+
+/* Header */
+#header {
+  .greyGrad;
+  font-family: @Sans;
+  padding-top:@margin;
+  border-bottom: 2px solid @greyDark;
+  height: 90px;
+}
+#header .wrapped {
+  height: 70px;
+}
+#vrLogo img{
+  margin-top: 5px;
+}
+#tools {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#tools .dropDown {
+  margin: 0 0 0 @margin;
+  float: right;
+  min-width: 155px;
+  position: relative;
+  z-index: 10;
+}
+.dropDown dd {
+  background: @white;
+  border-left: 1px solid @greyDark;
+  border-right: 1px solid @greyDark;
+  display: none;
+  line-height: 15px;
+  overflow: hidden;
+  text-align: center;
+  margin: 0;
+}
+.dropDown dd:last-child {
+  border-bottom: 1px solid @greyDark;
+}
+.dropDown dd a {
+  display: block;
+  font-weight: 400;
+  padding: @margin 5px;
+  margin: 2px;
+}
+.no-touch .dropDown dd a:hover {
+  color: white;
+  display: block;
+  background: @green;
+}
+#header nav {
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  font-size: 1.0em;
+}
+#header nav li {
+  display: inline-block;
+  margin: 0 5px 0 0;
+  font-weight: bold;
+  min-height: 18px;
+  padding: @margin;
+}
+#header nav li:last-child {
+  margin-right: 0;
+  padding-right:0;
+}
+.venta #btnComprar,
+.renta #btnRent, 
+.lanzamientos .proyectos, 
+.homeRealEstate .inmobiliaria {
+  .rounded-tabs(5px);
+  background: @white;
+  border:2px solid @greyDark;
+  border-bottom: none;
+  padding-right: @margin!important;
+}
+#header .formSearch {
+  float:right;
+  margin-left: 10px;
+  position: relative;
+}
+#header .ac_input {
+  font-size: 0.9em;
+  padding-left: 25px;
+  width: 180px;
+}
+#header .formSearch input[type="submit"].srchButton {
+  .no-button;
+  height: 26px;
+  left: 2px;
+  filter:none;/* IE6-9 */
+  position: absolute;
+  text-indent: -9999px;
+  top: 2px;
+  width: 26px;
+  background: url(../../img/core/spriteGeneral.png) no-repeat -9px -52px;
+}
+/* Footer */
+footer {
+  background: #F3F2ED;
+  clear: both;
+  overflow: hidden;
+  font-family: @Sans;
+  padding: 30px 0 0 0;
+  border-top: 1px solid @grey;
+}
+footer .col {
+  width: 24%;
+  margin:0 2% @marginBig * 2 0;
+}
+footer li {
+  color: @green;
+}
+footer .col.publish,
+footer .col.about,
+footer .col.follow, {
+  width: 14.6%;
+}
+footer .col.publish {
+  background: none;
+  padding: 0;
+}
+footer .col.follow,{
+  margin-right:0;
+  float:right;
+}
+footer h4 {
+  white-space:nowrap;
+  border-bottom: 1px dotted @black3;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+.copyright {
+  clear: both;
+  padding-top: @marginBig;
+  margin: 0;
+  text-align: center;
+  border-top: 1px dotted darken(@greyDark, 5%);
+  color: @greyFontlight;
+}
+footer .enterP {
+  background: none;
+  border:none;
+  box-shadow: none;
+  float: none;
+  text-shadow:none;
+  color:@green;
+}
+/* Content Home */
+
+.searchContainer h1 {
+  margin-top:0;
+}
+.searchContainer {
+  .greenGrad2;
+  color:@white;
+  padding:20px 0;
+  margin-bottom: @margin * 2;
+}
+#buscaInmuebles {
+  float:left;
+}
+#buscadores {
+  min-height: 440px;
+  width: 400px;
+  border-top-left-radius: 0;
+}
+.filtroBusca {
+  margin: @margin 0 0 @margin * 6;
+}
+#featured {
+  margin: 39px 0 0 0;
+  float: right;
+  width: 498px;
+  min-height: 450px;
+}
+#featured h2 {
+  margin-top: 0;
+  font-weight: normal;
+}
+#featured h2 > a {
+  font-size: 0.7em;
+}
+#effectCambiarUbicacionUsuario {
+  font-size: 0.6em;
+  padding-top:7px;
+}
+#effectCambiarUbicacionUsuario a {
+  margin-right: 5px;
+}
+#featured ul {
+  width: 48%;
+  float: left;
+  margin: 5px 2% 0 0;
+}
+#featured li {
+  color: @green;
+}
+.infoPhoto a {
+  font-size: 0.9em;
+}
+#nav.wrapped {
+  padding-bottom: 0;
+}
+#nav li {
+  display: inline-block;
+  text-align: center;
+  border-left: dotted 1px #CCC;
+  margin-left: 0;
+}
+#nav li:last-child {
+  border-right: dotted 1px #CCC;
+}
+#nav li a {
+  padding: 20px 0;
+  width: 241px;
+  font-size: 1.16em;
+  color:white;
+  font-weight: bold;
+  display: inline-block;
+}
+.no-touch #nav li a:hover {
+  color:#CCCCCC;
+}
+.proxioCTA p {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0 0 @marginSmall 0;
+  font-style: italic;
+  width: 175px;
+  float: left;
+  font-family: 'Droid Serif', serif;
+  line-height: 1.2em;
+}
+.proxioCTA a {
+  float: right;
+}
+.proxioCTA .imgWrapper {
+  overflow: hidden;
+  clear: both;
+}
+.col.right h2 {
+  font-weight: normal;
+}
+.ciudadesMasBuscadas li {
+  list-style: none;
+  display: inline-block;
+  vertical-align:text-top;
+  margin:@marginSmall @margin 0 0;
+}
+.ciudadesMasBuscadas p {
+  margin: 0;
+}
+.ciudadesMasBuscadas a {
+  width:143px;
+  padding-top: 90px;
+  background-repeat: no-repeat;
+  display: block;
+  font-weight: bold;
+  height: 29px;
+}
+/* Content Landing pages de seccion Venta Renta */
+
+.proxioContent .tagCloud {
+  width: 635px;
+  clear: none;
+}
+.proxioContent .proxioCTA  { 
+  width: 270px;
+  float: right;
+  clear: none;
+}
+.proxioContent .description {
+  width: 635px;
+  float: left;
+}
+.venta #map,  
+.renta #map, 
+.homeRealEstate #map_canvas, 
+.lanzamientos #map_canvas,
+.propertyDetail #map_canvas {
+  width: 637px!important;
+  height: 500px;
+  border: solid 1px @grey;
+}
+.mapaBusqueda {
+  float: left;
+  width: 635px;
+  margin:0 @marginBig @marginBig 0;
+}
+
+/* Paginas de proxio */
+#proxioCloud {
+  float:left;
+  width: 300px;
+  clear: none;
+}
+#proxioSeoText {
+  float: right;
+  margin: 20px 0 0 20px;
+  padding-top: 0;
+  width: 600px;
+  clear: none;
+}
+
+/* ASIDE */
+/* Like Buttons */
+aside h2 {
+  font-size: 1.25em;
+}
+aside h3 {
+  font-size: 1.25em!important;
+  margin: 10px 0 5px 0;
+}
+aside h4 {
+  font-size: 1.0em;
+  margin: 10px 0 5px 0;
+}
+aside li {
+  color: @green;
+  font-size: 0.9em;
+  margin: 7px 0 0 0;
+  list-style: none;
+}
+.likeButtons {
+  padding-bottom: @marginSmall;
+  height: 140px;
+}
+.likeButtons h2 {
+  font-size: 1.1em;
+}
+.likeButtons li {
+  list-style: none;
+  margin:0 0 @marginSmall 0;
+}
+aside .publicidad,
+.col.right.small .publicidad {
+  background: @greyLight;
+  margin: 0 0 @margin*2;
+  text-align: center;
+}
+.col.right.small .publicidad {
+  
+}
+.col.right.small .publicidad iframe{
+  border:1px solid @greyLight;
+}
+.publicidad h6 {
+  font-size:0.7em;
+  text-transform: uppercase;
+  color:@greyFontlight;
+  font-family: @Sans;
+  font-weight: normal;
+  padding-top: 3px;
+  letter-spacing: 0.2em;
+}
+aside .publish {
+  .blueGrad;
+  text-align: center;
+}
+aside .publish a {
+  color: @white;
+}
+aside .notifications {
+  background: @blueBGLight url(../../img/core/icnCrearAlertas.jpg) no-repeat 12px 12px;
+}
+aside .notifications p {
+  padding-left: 60px;
+  min-height: 60px;
+  margin: @margin 0 0 0;
+  font-size: 0.9em;
+  line-height: 1.35em;
+}
+aside .notifications .btn {
+  display: block;
+  text-align: center;
+}
+.newProject {
+  display: block;
+  background: @greenDark url(../../img/core/img_newproj.png) no-repeat 0 4px;
+  color:@white;
+  height: 53px;
+  padding: 10px 10px 10px 90px;
+  margin: 0 0 10px;
+}
+#topNoSlider > a {
+  display: block;
+  background: @white;
+  text-align: center;
+}
+
+ul.share {
+  background-color: @white;
+  border: @grey solid 1px;
+  display: block;
+  float: left;
+  left: 0;
+  overflow: visible;
+  padding: 15px 3px;
+  position: fixed;
+  top: 190px;
+  z-index: 95;
+}
+ul.share::before,
+ul.share::after {
+  background: transparent url(../../img/core/img_top_shadow.png) top left no-repeat;
+  content: "";
+  height: 8px;
+  position: absolute;
+  width: 53px;
+  z-index: 10;
+  left: -2px;
+}
+ul.share::before {
+  top: -8px;
+}
+ul.share::after {
+  background: transparent url(../../img/core/img_bottom_shadow.png) bottom left no-repeat;
+  bottom: -8px;
+  left: -5px;
+}
+ul.share li {
+  list-style: none;
+  padding: 10px 7px;
+  background: url(../../img/core/img-share-split.png) bottom no-repeat;
+  margin:0;
+}
+ul.share li:last-child {
+  background: 0;
+}
+ul.share li a {
+  display: block;
+  width: 23px;
+  height: 22px;
+  text-indent: 120%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+ul.share li a.facebook {
+  background: url(../../img/core/btn-facebook_v2.png) top no-repeat;
+}
+ul.share li a.gmail {
+  background: url(../../img/core/btn-gmail_v2.png) top no-repeat;
+}
+ul.share li a.twitter {
+  background: url(../../img/core/btn-twitter_v2.png) top no-repeat;
+}
+ul.share li a.pinterest {
+  background: url(../../img/core/btn-pinterest_v2.png) top no-repeat;
+}
+ul.share li a.mail {
+  background: url(../../img/core/btn-mail_v2.png) top no-repeat;
+  width: 28px;
+  height: 18px;
+  margin-left: -4px;
+}
+ul.share li a:hover {
+  background-position: bottom;
+}
+
+#backToTop {
+  background: white url('../../img/core/btn-backToTop.png') no-repeat center top;
+  bottom: -40px;
+  -moz-border-radius: 35px 35px 0 0;
+  -webkit-border-radius: 35px 35px 0 0;
+  border-radius: 35px 35px 0 0;
+  -webkit-box-shadow: 0 0 0 5px rgba(0, 0, 0, .1);
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, .1);
+  color: #B7B7B7;
+  font-family: @Sans;
+  font-size: 10px;
+  font-weight: 400;
+  height: 35px;
+  line-height: 50px;
+  position: fixed;
+  right: 25px;
+  text-align: center;
+  width: 70px;
+  z-index: 90;
+}
+.no-touch #backToTop:hover {
+  background: #CCC url('../../img/core/btn-backToTop.png') no-repeat center -23px;
+  color: white;
+  text-decoration: none;
+}
+
+
+/* pagina de registro desde el web2lead */
+.publicarInmuebles {
+  margin-top:10px;
+}
+.ventajas {
+  width: 320px;
+}
+
+/* Email Notifications */
+#emailNotifications {
+  padding-top: 20px;
+}
+#emailNotifications .ubicacion {
+  background: 0;
+  width: 35%;
+  float: right;
+  margin: 15px 0 0 0;
+}
+#emailNotifications .navLstProp,
+#emailNotifications .datosBasicos {
+  float: left;
+  width: 55%;
+  padding: 20px 30px 0 30px;
+}
+#emailNotifications h3 {
+  font-size: 1.4em;
+  margin: 10px 0 20px 0;
+  font-style: normal;
+  font-weight: normal;
+  color:@greyFontDark;
+}
+#emailNotifications .navLstProp h3 {
+  background: none;
+  margin: 0 0 20px 0;
+  padding:0;
+}
+#emailNotifications .datosBasicos h3 {
+  border-top: @hDivider1;
+  padding-top: 10px;
+}
+#emailNotifications .datosBasicos {
+  margin-top: -20px;
+  padding-top: 0;
+}
+#emailNotifications .ubicacionBarrios {
+  height: 60px;
+  border-bottom: @hDivider1;
+}
+#emailNotifications .ubicacionBarrios > div {
+  float:left;
+  width: auto;
+  margin-right: 35px;
+}
+#emailNotifications .data {
+  float:left;
+  width: 47%;
+  margin-top: @marginSmall;
+  height: 75px;
+}
+#emailNotifications .data.last {
+  float: right;
+}
+#emailNotifications .datosBasicos .data > p {
+  margin: 0;
+  font-size: 0.9em;
+}
+#emailNotifications .datosBasicos label {
+  margin-right: @margin * 2;
+}
+#emailNotifications .datosBasicos br {
+  display: none;
+}
+#emailNotifications .datosBasicos .data.search {
+  padding:0;
+  width: 100%;
+  float: none;
+  border-bottom: @hDivider1;
+  height: 60px;
+}
+#emailNotifications .description {
+  font-size: 1.0em;
+}
+#form_contactable,
+#form_periodicidad {
+  clear: both;
+  display: block;
+  line-height: 2.0em;
+}
+/*  About */
+.ourSites {
+  display: block;
+  clear: both;
+}
+.ourSites li {
+  margin: 0 10px 10px 0;
+  width: 30%;
+  padding: 1%;
+  margin-right: 1%;
+  float: left;
+  min-height: 190px;
+  list-style: none;
+  clear:none;
+}
+.recoSites {
+  clear: both;
+  margin-top: @marginBig;
+}
+.recoSites li {
+  float:left;
+  width: 32%;
+  margin: @marginBig 1% @marginBig 0;
+  list-style: none;
+}
+.VRNetwork .block {
+  float: left;
+  width: 47%;
+  padding: 1%;
+  margin-right: 1%;
+}
+.VRNetwork .block.greyBox {
+  clear: none;
+  min-height: 340px;
+}
+.VRNetwork .block.a li {
+  margin-bottom: @margin;
+  line-height: 140%;
+}
+.VRNetwork .block.b {
+  float: right;
+  margin-right: 0;
+  font-size: 1.05em;
+}
+ul.tel li {
+  float:left;
+  width: 50%;
+  list-style: none;
+  margin:0 0 @marginSmall 0;
+}
+.VRNetwork .block.b h4 {
+  display: block;
+  clear: both;
+  margin-top: @marginBig;
+}
+
+/* SiteMap */
+.siteLnk {
+  float:left;
+  width: 46%;
+  clear: none;
+}
+.siteLnk.dos {
+  float:right;
+}
+.contSitemap.int .siteLnk {
+  width: 98%;
+  float: none;
+}
+.divLnks {
+  margin: 10px 0;
+  overflow: hidden;
+  clear: both;
+  border-bottom: @hDivider1;
+}
+ul.liCatD {
+  margin-bottom: @marginBig;
+}
+
+/* Legal terms */
+.staticPage {
+  line-height: 145%;
+}
+.staticInx {
+  padding:@margin*2 0 @margin*4 0!important;
+}
+.staticInx li {
+  width: 30%;
+  margin-right: 1%;
+  float: left;
+  list-style: none;
+  text-align: center;
+}
+.staticInx li a {
+  padding:@margin*2 50px!important;
+}
+/* Info Jobs */
+
+#hr_banner {
+  background: #EFEFE9 url(../../img/core/bg_banner.gif) repeat-x 0 100%;
+  color: #333;
+  font: normal 400 12px/16px 'Droid Serif', Georgia;
+  min-height: 95px;
+  max-width: 597px;
+  overflow: hidden;
+  padding: 20px 30px 0;
+  position: relative;
+}
+#hr_banner .bg_house {
+  background: transparent url(../../img/core/bg_house.png) no-repeat 0 0;
+  height: 108px;
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 287px;
+}
+#hr_banner h2 {
+  background: none; 
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  margin: 0 0 5px;
+  padding: 0;
+  border:none;
+}
+#hr_banner p {
+  margin: 0 0 8px;
+  width: 350px;
+}
+#hr_banner .btn {
+  margin-top: @margin;
+  font-size: 14px;
+  padding: @margin;
+  width: 176px;
+  text-align: center;
+}
+.short #hr_banner {
+  margin: -10px;
+  min-height: 188px;
+  padding: 22px 0 0 140px;
+}
+.short #hr_banner .bg_house {
+  left: -140px;
+  top: 50px;
+}
+.short #hr_banner .btn {
+  width: 140px;
+}
+#homepage #hr_banner {
+  margin-bottom: 20px;
+}
+#homepage #hr_banner p {
+  width: 290px;
+}
+/* Error Pages */
+.errorPage,
+.error404 {
+  background: url(../../img/core/img-error404.jpg) left center no-repeat;
+  color: @greyFont;
+  padding: 110px 0 110px 570px;
+  margin-top: 20px;
+  font-family:@Sans;
+  font-size: 15px;
+}
+.errorPage {
+  background: url(../../img/core/img-error.jpg) left center no-repeat;
+}
+.errorPage h1,
+.error404 h1 {
+  color: @greyFontDark;
+  font-size: 44px;
+  font-family: @Serif;
+  font-style: italic;
+  line-height: 100%;
+}
+.errorPage p,
+.error404 p {
+  margin-bottom: 20px;
+}
+
+/* Parceiros */
+.VRpartners li {
+  .rounded-corners;
+  background-color: @greyLight2;
+  display: inline-block;
+  margin: 0 6px 15px 6px;
+  padding: @marginSmall;
+}
+.VRpartners li a {
+  display: block;
+}
+.VRpartners li img {
+  border: 0;
+  width: 220px;
+}
+
+/* MAP Styles */
+#searchMapForm h3 {
+  font-size: 1.1em;
+}
+#searchMapForm select {
+  padding: 2px 2px 2px 5px;
+  height: 20px;
+  margin-bottom: 0;
+} 
+#searchMapForm .zoomMap,
+#searchMapForm .resetMap {
+  font-size: 0.9em;
+  display:block;
+  margin-bottom: 5px;
+}
+#searchMapForm .resetMap {
+
+}
+/* alert creation success   */
+.updateSuccess {
+  width: 600px;
+  margin: 40px auto;
+  padding-top: 20px;
+}
+.updateSuccess p {
+  font-size: 1.3em;
+}
+.updateSuccess strong {
+  font-size: 1.3em;
+  display: block;
+  margin-bottom: @marginSmall;
+  color: @green;
+  font-style: italic;
+}
+
+/* fullBackground */
+#content .fullBackground > header {
+  background: #7CCBEE url(../../img/core/bg-developments-header3.jpg) bottom left repeat-x;
+  height: 335px;
+  color: @white;
+}
+#content .fullBackground > header.short {
+  height: 280px;
+}
+
+/* Container for tab components */
+.contentTabs {
+  margin: 0 0 @margin*2;
+  padding-top: @marginBig;
+}
+  .contentTabs section {
+    border: 1px solid @greyLight;
+    color: @greyFont;
+    padding: @margin*2;
+  }
+  .contentTabs h2,
+  .contentTabs h3 {
+    color: @greyFont;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 0.8em;
+  }
+  .contentTabs .descTitle {
+    font-style: italic;
+    font-weight: 700;
+  }
+  .contentTabs p {
+    color: @greyFontlight;
+    font-size: 1em;
+    margin: 0 0 1.5em;
+  }
+  .contentTabs .introText {
+    overflow: hidden;
+  }
+
+
+@import url("detail.less");
+@import url("results.less");
+@import url("publish.less");
+@import url("web2lead.less");
+@import url("helper.less");

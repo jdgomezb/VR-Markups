@@ -1,0 +1,865 @@
+.publicarPropiedad #content > .inmobiliarios {
+  background-image: url(../../img/core/mapa_3.png);
+  height: 310px;
+  border-bottom: 1px solid #C8C8C8;
+  margin-bottom: 40px;
+}
+.inmobiliarios .house {
+  background: url(../../img/core/house.png) right 35px no-repeat;
+  background-size: 310px;
+  padding: 70px 350px 0 0;
+  width: 510px;
+  height: 200px;
+}
+.inmobiliarios h1, 
+.blockbg h1 {
+  font-size: 2.9em;
+  font-style: italic;
+  line-height: 1.1em;
+  margin: 0 auto;
+  text-shadow: 1px 1px @blueLine;
+  color:@white;
+}
+.inmobiliarios #tab-container {
+  clear: both;
+  position: absolute;
+  text-align: center;
+  height: 66px;
+  overflow: hidden;
+  width: 100%;
+  background: none;
+  border:none;
+  margin: -25px 0 0 0;
+  padding:0;
+}
+.inmobiliarios #tab-container ul {
+  width: 860px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.inmobiliarios #tab-container li {
+  float: none;
+  display: inline-block;
+  padding-top: 25px;
+  list-style-type: none;
+  position: relative;
+  margin: 0;
+}
+.inmobiliarios #tab-container li.first {
+  margin-right: -3px;
+}
+.inmobiliarios #tab-container li.first a {
+  border: 1px solid #F2F2F2;
+  border-radius: 4px 0 0 0;
+}
+.inmobiliarios #tab-container li.current {
+  padding-top: 11px;
+}
+.inmobiliarios #tab-container li a {
+  display: block;
+  background: #F2F2F2 url(../../img/core/tab_bg.png) top left repeat-x;
+  color: #4E4E4E;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 700;
+  padding: 12px 50px 11px;
+  text-decoration: none;
+  height: 17px;
+}
+.inmobiliarios #tab-container li a.border {
+  border-left: 1px solid #CDCDCD;
+  border-radius: 0 3px 0 0;
+  border-bottom: 0;
+}
+.no-touch .inmobiliarios #tab-container li a:hover {
+  background: #E4E4E4;
+  text-decoration: none;
+}
+.no-touch .inmobiliarios #tab-container li.current a:hover, 
+.inmobiliarios #tab-container li.current a {
+  background: 0;
+  background: white;
+  border: 1px solid white;
+  border-radius: 4px 4px 0 0;
+  border-bottom: 0;
+  color: #587D92;
+  font-size: 18px;
+  padding: 18px 65px 20px;
+  display: block;
+  height: 16px;
+}
+.inmobiliarios #tab-container li:first-child.current:before {
+  background: transparent url(../../img/core/tab_shadow_left.png) bottom left no-repeat;
+  width: 13px;
+  height: 56px;
+  float: left;
+  content: "";
+  display: block;
+  margin-left: -14px;
+}
+.inmobiliarios #tab-container li.current:before {
+  background: transparent url(../../img/core/sombra_gris_left.png) bottom left no-repeat;
+  width: 8px;
+  height: 42px;
+  float: left;
+  content: "";
+  display: block;
+  margin-left: -8px;
+  padding-top: 11px;
+}
+.inmobiliarios #tab-container li.current:after {
+  background: url(../../img/core/sombra_gris.png) top left no-repeat;
+  width: 17px;
+  height: 40px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  margin: 20px -20px 0 0;
+  right: 2px;
+  z-index: 5;
+}
+
+/* SIGN-IN CONTAINER */
+.imobiliarias, 
+.proprietarios {
+  position: relative;
+  background-color: white;
+  overflow: hidden;
+  padding-bottom: 30px;
+}
+.proprietarios {
+  clear: both;
+  width: 780px!important;
+}
+  /* Statistics */
+    .statistics {
+      float: left;
+      font-size: 1.1em;
+      width: 307px;
+    }
+    .statistics dt {
+      font-size: 1.1em;
+      padding: 0 0 25px 10px;
+    }
+    .statistics dd {
+      min-height: 95px;
+      padding: 10px 0 0 140px;
+      line-height: 130%;
+      font-style: italic;
+    }
+    .statistics strong {
+      color: @brightBlue;
+    }
+    .statistics small {
+      display: block;
+    }
+    dd.leadsIcn {
+      background: url('../../img/core/icn_benefits_leads.png') no-repeat left top;
+    }
+    dd.plansIcn {
+      background: url('../../img/core/icn_benefits_plans.png') no-repeat left top;
+    }
+    .portal_VR_BR .countryIcn {
+      background: url('../../img/vr_br/icn_benefits_br.png') no-repeat left top;
+    }
+    dd.taxIcn {
+      padding-top: 35px;
+      background: url('../../img/core/icn_benefits_tax.png') no-repeat left top;
+      min-height: 80px;
+    }
+    .proprietarios .statistics .premier {
+      font-style: italic;
+      text-align: center;
+      font-size: 0.8em;
+    }
+    .proprietarios .statistics .premier span {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 1.1em;
+    }
+  /* END - Statistics */
+  /* Contact Form */
+    .imobiliarias .contact {
+      width: 610px;
+      float: right;
+    }
+    .imobiliarias .contact header {
+      background: url(../../img/core/tophead2.png) no-repeat bottom;
+      width: 612px;
+      height: 65px;
+      padding: 10px 0 7px 0;
+    }
+    .imobiliarias .contact h2,
+    .imobiliarias .contact h6,
+    .proprietarios .plans h2 {
+      font-size: 2.2em;
+      color: @white;
+      text-align: center;
+      font-style: italic;
+      font-family: @Serif;
+    }
+    .imobiliarias .contact h2 {
+      margin: 3px 0 0;
+      font-weight: 400;
+    }
+    .imobiliarias .contact h6 {
+      font-size: 0.9em;
+      font-weight: normal;
+      margin-top: 2px;
+    }
+  /* END - Contact Form */
+  /* Plans */
+    .proprietarios .plans {
+      width: 445px;
+      float: right;
+      color:@greyFont;
+    }
+    .proprietarios .plans header {
+      background: url(../../img/core/visual_head2.png) no-repeat bottom;
+      height: 65px;
+      padding: 8px 0;
+    }
+    .proprietarios .plansDescription {
+      background: url(../../img/core/bg_grey_texture.png);
+      width: 418px;
+      height: 436px;
+      text-align: center;
+      padding-bottom: 30px;
+      margin:0 13px;
+      border:1px solid @grey;
+      border-top: none;
+    }
+    .proprietarios .precio {
+      font-style: italic;
+      border-top:@hDivider1;
+      border-bottom:@hDivider1;
+      padding-bottom: 10px;
+      margin: 15px 30px;
+    }
+    .proprietarios .precio h5 {
+      font-size: 2.4em;
+      color: @blueFont;
+    }
+    .proprietarios .precio h5 small {
+      font-size: 0.6em;
+      color:@greyFont;
+      font-weight: normal;
+    }
+    .proprietarios .precio h6 {
+      font-size:1.0em;
+    }
+    .proprietarios ul {
+      margin:0 20px 20px 60px;
+    }
+    .proprietarios li {
+      float: left;
+      width: 40%;
+      text-align: left;
+    }
+
+  /* END - Plans */
+
+/* END - SIGN-IN CONTAINER */
+/* BENEFITS CONTAINER */
+  .benefitsCarousel {
+    background: url(../../img/core/bg_yellow.png) top left repeat;
+    border-top: @hDivider1;
+    width: 100%;
+    height: 365px;
+    padding: 20px 0;
+  }
+  .benefitsCarousel .wrapped {
+    position: relative;
+  }
+    .benefitsCarousel .wrapContainer {
+      overflow: hidden;
+      position: absolute;
+      top:0px;
+      left:40px;
+      width:870px;
+    }
+    .benefitsCarousel .container {
+      width:999999px;
+    }
+    .benefitsCarousel .container .slide {
+      float:left;
+      font-style:italic;
+      height:270px;
+      position: relative;
+      padding: 60px 40px 0 420px;
+      width:390px;
+      list-style: none;
+    }
+    #carouselProprietarios .slide1,
+    #carouselImobiliarias .slide1 {
+      background: url(../../img/core/1_potencialize_divulgacao.png) top left no-repeat;
+    }
+    #carouselProprietarios .slide2,
+    #carouselImobiliarias .slide2 {
+      background: url(../../img/core/2_controle_resultados.png) top left no-repeat;
+    }
+    #carouselProprietarios .slide3,
+    #carouselImobiliarias .slide3 {
+      background: url(../../img/core/3_melhor_retorno.png) top left no-repeat;
+    }
+    #carouselProprietarios .slide4,
+    #carouselImobiliarias .slide4 {
+      background: url(../../img/core/4_facil_integracao.png) top left no-repeat;
+    }
+    .benefitsCarousel .slide h2 {
+      color: @greyFont;
+      font-size: 2.6em;
+      font-weight: normal;
+      line-height: 1.1em;
+      margin-bottom: 20px;
+    }
+    .benefitsCarousel .slide p {
+      color: @greyFont;
+      font-size: 1.15em;
+    }
+    .benefitsCarousel .btnRight,
+    .benefitsCarousel .btnLeft{
+      position: absolute;
+      top: 140px;
+      width: 35px;
+      height: 49px;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+    } 
+    .benefitsCarousel .btnLeft{
+      background: url(../../img/core/slide_arrow_left.png) top left no-repeat;
+      left: 0;
+    }
+    .benefitsCarousel .btnRight{
+      background: url(../../img/core/slide_arrows_right.png) top left no-repeat;
+      right:48px;
+    }
+    .no-touch .benefitsCarousel .btnRight:hover,
+    .no-touch .benefitsCarousel .btnLeft:hover {
+      text-decoration: none;
+      background-position: 0 -55px;
+    }
+    /* MENU CAROUSEL */
+    .benefitsCarouselNav{
+      background:url(../../img/core/bg_menu.png) top left repeat;
+      width:100%;
+      height:61px;
+    }
+    .benefitsCarouselNav ul{
+      margin: 0 auto;
+      width:1000px;
+      overflow: visible;
+    }
+    .benefitsCarouselNav ul li{
+      float: left;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      text-align: center;
+    }
+    .benefitsCarouselNav ul li.selected {
+      background:@darkLight;
+      height: 59px;
+      top: 0;
+      border: 1px solid @darkDark;
+    }
+    .benefitsCarouselNav ul li.selected:after {
+      background: url(../../img/core/bullet_navbar.png) top left no-repeat;
+      content: "";
+      width: 19px;
+      height: 11px;
+      display: block;
+      position: absolute;
+      left: 105px;
+      top: -11px;
+      z-index: 9;
+    }
+    .benefitsCarouselNav ul li a {
+      color: lighten(@darkLigther, 10%);
+      display: block;
+      font-size: 1.1em;
+      font-weight: bold;
+      font-style: italic;
+      height: 46px;
+      margin: 0 10px;
+      padding: 15px 10px 10px 0;
+      width: 200px;
+    }
+    .benefitsCarouselNav ul li.selected a {
+      color: #FFF;
+    }
+  
+  /* @end */
+
+
+/* Empresas Section */
+  .empresas{
+    background: @greyLight url(../../img/core/background_grey.jpg) top left repeat;
+    padding: 60px 0 30px 0;
+    border-top: @hDivider1;
+  }
+  .empresas .wrapped h3{
+    text-align: center;
+    font-size:1.25em;
+    color:@greyFont;
+    margin: 0 0 50px 0;
+  }
+  .empresas .testimonial{
+    float: left;
+    width:319px;
+    height:252px;
+    margin-right: 17px;
+    margin-left: 42px;
+    position: relative;
+    padding: 20px 0 0 0;
+    overflow: hidden;
+  }
+  .empresas .testimonial:before{
+    background:url(../../img/core/quotemarks_left.png) top left no-repeat;
+    display: block;
+    position: absolute;
+    width:40px;
+    height:35px;
+    content: "";
+    top:0;
+    left:0;
+  }
+  .empresas .testimonial:after{
+    background:url(../../img/core/quotemarks_right.png) bottom right no-repeat;
+    display: block;
+    width:40px;
+    height:35px;
+    position: absolute;
+    content: "";
+    bottom:75px;
+    right:0;
+  }
+  .empresas .testimonial .bio{
+    overflow: hidden;
+    list-style: none;
+    width:2000px;
+    height:180px;
+    margin-top: 26px;
+
+  }
+  .empresas .testimonial .bio li{
+    width:320px;
+    height:130px;
+    float: left;
+    list-style: none;
+    margin: 0;
+  }
+  .empresas .testimonial .bio li blockquote{
+    color: #6b6b6b;
+    font-size:12px;
+    font-style:italic;
+    margin: 0 0 17px 0;
+  }
+  .empresas .testimonial .bio li .footer .author{
+    font-family:'Droid Serif', Georgia;
+    font-weight:700;
+    font-size:14px;
+    color: #66a038;
+    font-style:italic;
+  }
+  .empresas .testimonial .bio li .footer .position{
+    display: block;
+    font-family:'Droid Serif', Georgia;
+    font-size:11px;
+    color: #676767;
+    font-style:italic;
+  }
+  .empresas .testimonial .bio li .foto_author{
+    float: left;
+    padding:1px;
+    margin-right: 9px;
+    border:1px solid #dedede;
+    height:51px;
+  }
+  .empresas .testimonial > a {
+    float:left;
+    width:20px;
+    height:17px;
+    margin: 10px 10px 0 0;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .empresas .testimonial a.btnleft{
+    border-right: 1px solid #dddddd;
+    background:url(../../img/core/buttons_arrow_left.png) top left no-repeat;
+  }
+  .empresas .testimonial a.btnright{
+    background:url(../../img/core/buttons_arrow_right.png) top left no-repeat;
+  }
+  .no-touch .empresas .testimonial a.btnleft:hover,
+  .no-touch .empresas .testimonial a.btnright:hover{
+    background-position: 0 -20px;
+  }
+  .empresas .grid {
+    float: right;
+    width: 600px;
+  }
+  .empresas .logos_empresas {
+    background:url(../../img/core/grid_dots.gif) 3px 0 repeat-x;
+  }
+  .empresas .logos_empresas.small{
+    width:588px;
+  }
+  .empresas .logos_empresas.large{
+    margin: 0 auto;
+    width:795px;
+  }
+  .empresas .logos_empresas li{
+    float:left;
+    display: block;
+    text-align: center;
+    width: 199px;
+    margin: 38px 0 0 0;
+    padding:0;
+  }
+  .empresas .logos_empresas li.third{
+    clear: both;
+  }
+
+/* END - Empresas Section */
+/* @group trademarks */
+    .trademarks{
+      border-top: @hDivider1;
+      background-color: @white;
+      padding: 60px 0;
+    }
+    .trademarks h3{
+      margin: 0;
+      text-align: center;
+      letter-spacing: -2px;
+      color:@greyFontlight;
+      font-size: 3.4em;
+      font-weight: normal;
+    }
+    .trademarks .quotemarks{
+      width:820px;
+      margin: 0 auto;
+      margin-bottom: 70px;
+      position: relative;
+    }
+    .trademarks .quotemarks:before{
+      background:url(../../img/core/quotemarks_left.png) top left no-repeat;
+      position: absolute;
+      width:40px;
+      height:35px;
+      top:0;
+      left:0;
+      content: "";
+    }
+    .trademarks .quotemarks:after{
+      background:url(../../img/core/quotemarks_right.png) top right no-repeat;
+      position: absolute;
+      width:40px;
+      height:35px;
+      bottom:0;
+      right:0;
+      content: "";
+    }
+    .trademarks .quotemarks blockquote{
+      padding: 35px 25px 0 25px;
+      font-size: 1.2em;
+      font-style:italic;
+      color: @greyFont;
+    }
+    .trademarks .logos{
+      margin: 0 auto;
+    }
+    .trademarks .logos{
+      overflow: hidden;
+      height:64px;
+    }
+    .trademarks .logos li{
+      float:left;
+      padding: 0 20px 0 0;
+      border-right:@hDivider1;
+      height:40px;
+      list-style: none;
+    }
+    .trademarks .logos li:last-child{
+      border:none;
+      margin-right: 0;
+      padding-right: 0;
+    }
+  /* @end - Trademarks */
+ /* JOIN */
+
+
+  .join {
+    background-color: @greyLight;
+    border-top: @hDivider1;
+    padding: 30px 0 50px 0;
+    color: @greyFont;
+  }
+  .join .red-imobiliaria{
+    float:left;
+    width:300px;
+    margin-right: 24px;
+    padding-top: 67px;
+  }
+  .join .red-imobiliaria .message{
+    margin: 0 auto;
+    width:253px;
+    text-align: center;
+    font-size: 1.1em;
+    font-style:italic;
+    margin-bottom: 10px;
+  }
+  .join .red-imobiliaria .btnSet {
+    margin: 0 auto;
+    font-family: 'Droid sans', sans-serif;
+    width:270px;
+  }
+  .join .separator {
+    float: left;
+    font-size: 25px;
+    color: @greyFont;
+    font-style:italic;
+    margin-top: 90px;
+    padding: 5px;
+    background: @greyLight;
+    z-index: 10;
+    position: relative; 
+  }
+  .join dl,
+  .msg-confirmacion dl {
+    float: right;
+    font-style: italic;
+    margin: 10px 20px 0 17px;
+    text-align: right;
+    max-width: 240px; 
+  }
+  .msg-confirmacion dl {
+    margin-left: 0;
+    max-width: 230px; 
+  }
+  .join dt,
+  .msg-confirmacion dt {
+    font-size: 15px;
+    padding-bottom: 5px;
+  }
+  .join dd,
+  .msg-confirmacion dd {
+    margin: 3px 0;
+  }
+  .join dt small,
+  .msg-confirmacion dt small {
+    display: block;
+    font-size: 0.8em;
+  }
+  .join dd strong,
+  .msg-confirmacion dd strong {
+    color: @greyFontDark;
+    font-size: 1.2em;
+  }
+  .join h4,
+  .msg-confirmacion h4 {
+    background: url(../../img/core/bg-call-us.png) no-repeat top center;
+    border-left:@hDivider1;
+    float: left;
+    font-size: 1.4em;
+    font-weight: normal;
+    font-style: italic;
+    margin: 30px 0 0 -15px;
+    padding: 115px 0 0 30px;
+    text-align: center;
+    width:345px;
+  }
+  .msg-confirmacion h4 {
+    padding-left: 20px;
+  }
+/* @end - Join */
+
+
+/* END - BENEFITS CONTAINER */
+
+.blockbg,
+.fondo-confirmacion {
+  background: url(../../img/core/mapa_3.png) left top repeat-x;
+  border-bottom: @hDivider1;
+}
+.blockbg .recoleccion-datos {
+  width: 892px;
+}
+.blockbg .recoleccion-datos header {
+  color:@white;
+}
+.blockbg .recoleccion-datos h1 {
+  float: left;
+  margin: 42px 0 0 0;
+  font-size: 40px;
+  width: 380px;
+  text-shadow: 1px 1px #5B9FC1;
+}
+.blockbg .phonecontact {
+  float: right;
+  text-align: right;
+  background: transparent url(../../img/core/celular_recolecciondatos.png) top right no-repeat;
+  margin: 30px 0 0 40px;
+  padding: 7px 55px 0 0;
+  width: 366px;
+  height: 124px;
+}
+.blockbg .phonecontact h4, 
+.blockbg .phonecontact p {
+  font-size:1.5em;
+  font-style: italic;
+  line-height: 1.2em;
+  margin:0;
+}
+.blockbg .phonecontact .telephone {
+font-size: 2.4em;
+font-weight: bold;
+}
+.blockbg .datos-adicionales {
+  clear: both;
+  background: white url(../../img/core/background_form.png) top left no-repeat;
+  position: relative;
+  border-top: 1px solid #61A0BC;
+}
+.blockbg .datos-adicionales::before {
+  background: url(../../img/core/sombra_azul_recolecciondatos_left.png) top left no-repeat;
+  position: absolute;
+  top: 70px;
+  left: -15px;
+  content: "";
+  width: 15px;
+  height: 104px;
+}
+.blockbg .datos-adicionales::after {
+  background: url(../../img/core/sombra_azul_recolecciondatos_right.png) top left no-repeat;
+  position: absolute;
+  top: 70px;
+  right: -15px;
+  content: "";
+  width: 15px;
+  height: 104px;
+}
+.blockbg .datos-adicionales .content {
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: @hDivider1;
+}
+.blockbg .datos-adicionales .content .titulo {
+  font-size: 32px;
+  font-family: @Serif;
+  color: @greyFontlight;
+  font-style: italic;
+  letter-spacing: -1px;
+}
+/* Confirmacion de datos*/
+
+ .fondo-confirmacion .illustration {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  background: url(../../img/core/head_illustration.png) left -7px no-repeat;
+  width: 545px;
+  padding: 20px 0 30px 440px;
+  color: @white;
+}
+.fondo-confirmacion .illustration h1 {
+  letter-spacing: -1px;
+  width: 340px;
+  font-size: 3.1em;
+  line-height: 1.0em;
+  text-shadow: 1px 1px @blueLine;
+  font-style: italic;
+  margin: 20px 0;
+}
+.fondo-confirmacion .illustration h5 {
+  width: 500px;
+  font-size: 1.7em;
+  font-style: italic;
+  line-height: 1.1em;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+.msg-confirmacion {
+  color: @greyFont;
+}
+.msg-confirmacion .blog-vivareal,
+.msg-confirmacion .noticias-vivareal {
+  margin-top: 50px;
+  float: left;
+  text-align: center;
+  height: 100px;
+  width: 250px;
+}
+.msg-confirmacion .blog-vivareal p,
+.msg-confirmacion .noticias-vivareal p {
+  margin:0;
+  font-size: 0.9em;
+  font-family: @Sans;
+}
+.msg-confirmacion .social-network {
+  clear: both;
+  border-top: @hDivider1;
+  margin-top: 35px;
+  padding-top: 8px;
+}
+.msg-confirmacion .social-network p {
+  float: left;
+  font-style: italic;
+  padding: 10px 0 0 0;
+  margin: 0 20px;
+  font-size: 1.1em;
+}
+.msg-confirmacion .social-network li {
+  display: inline-block;
+  margin: 0 5px 0 0;
+}
+.msg-confirmacion .social-network li a {
+  display: block;
+  background: url(../../img/core/social_buttons.png) top left no-repeat;
+  width: 35px;
+  height: 35px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.msg-confirmacion .social-network .facebook {
+  background-position: 0 left;
+}
+.msg-confirmacion .social-network .twitter {
+  background-position: 0 -40px;
+}
+.msg-confirmacion .social-network .flickr {
+  background-position: 0 -79px;
+}
+.msg-confirmacion .social-network .youtube {
+  background-position: 0 -156px;
+}
+.msg-confirmacion .social-network .myspace {
+  background-position: 0 -196px;
+}
+.msg-confirmacion .social-network .googleplus {
+  background-position: 0 -235px;
+}
+.msg-confirmacion .contact {
+  float: right;
+  text-align: center;
+  margin: 20px 0 0 0;
+  width: 470px;
+}
+.msg-confirmacion h4 {
+  border-left: none;
+  width: 200px;
+  background-position: 54px 0px;
+  font-size: 1.2em;
+  margin-left:10px;
+}
+.msg-confirmacion dl {
+  margin-right: 0;
+  max-width: 210px;
+}
