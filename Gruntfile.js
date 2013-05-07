@@ -29,6 +29,7 @@ module.exports = function(grunt) {
       livereload: {
         options: {
           base: 'markup/',
+          hostname: '192.168.1.60',
           port: 9001,
           middleware: function(connect, options) {
             return [lrSnippet, folderMount(connect, options.base)]
@@ -40,7 +41,7 @@ module.exports = function(grunt) {
     less: {
       development: {
         options: {
-          paths: ["css"]
+          paths: ["markup/css/less"]
         },
         files: {
           "markup/css/core/core6.0.css": "markup/css/less/styles.less"
@@ -50,9 +51,11 @@ module.exports = function(grunt) {
 
     regarde: {
       css: {
-        files: ['markup/css/less/*.less'],
-        tasks: ['less', 'livereload'],
-        spawn: true
+        files: [
+          'markup/**/*.less',
+          'markup/**/*.html'
+        ],
+        tasks: ['reload']
       }
     }
 
@@ -65,6 +68,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
 
   // Default task.
-  grunt.registerTask('default', ['livereload-start', 'connect', 'regarde', 'less']);
+
+    grunt.registerTask('build', [ 'less' ]);
+
+    grunt.registerTask('reload', [ 'build', 'livereload' ]);
+    grunt.registerTask('live', [ 'build', 'livereload-start', 'connect', 'regarde' ]);
+
+
+    grunt.registerTask('default', ['live']);
 
 };

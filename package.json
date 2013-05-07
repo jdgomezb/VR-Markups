@@ -72,7 +72,8 @@
     "difflet": "~0.2.3",
     "grunt-contrib-livereload": "~0.1.2",
     "grunt-contrib-connect": "~0.3.0",
-    "grunt-regarde": "~0.1.1"
+    "grunt-regarde": "~0.1.1",
+    "grunt-contrib-less": "~0.5.1"
   },
   "contributors": [
     {
