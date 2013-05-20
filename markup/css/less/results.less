@@ -445,7 +445,6 @@
 /***********************************************************************/
 
 .search_description {
-
   font-family: @Sans;
 
   .sd_title {
@@ -457,9 +456,11 @@
   }
 
   .sd_characteristics {
-
     font-weight: 400;
     margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .sd_count {
@@ -482,8 +483,14 @@
 
 }
 
+.search_actions {
+  position: absolute;
+  right: 10px;
+}
+
 .filterSearch {
   background-color: @greyDarkBG2;
+  margin-bottom: @margin*2;
 
   .fs_title {
     background-color: @greyDarkBG1;
@@ -570,7 +577,6 @@
   }
 
   .btn {
-    font-size: .85em;
     font-weight: 400;
   }
 
@@ -621,7 +627,6 @@
   position: relative; 
 
   .btn.fake_trigger {
-    font-size: .9em;
     padding: 8px 10px;
     text-align: left;
     width: 100%;
@@ -658,8 +663,28 @@
 .listProperties .contentTabs {
   padding-top: 0;
 
-  section {
-    padding: 20px 15px;
+  .currentSection {
+    border: none;
+    border-top: 1px solid @greyLight;
+    padding: 15px;
+    position: relative;
+  }
+
+  .currentSection:before,
+  .currentSection:after {
+    .gradient(@greyLight, @white, 10%, 30%);
+    content: " ";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 1px;
+  }
+
+  .currentSection:before {
+    left: 0;
+  }
+  .currentSection:after {
+    right: 0;
   }
 }
 
@@ -677,6 +702,12 @@
     margin: 0 0 6px;
     text-align: center;
   }
+
+  .fp_title:before,
+  .fp_title:after {
+    content: " - ";
+  }
+
 
   .fp_units {
     overflow: hidden;
@@ -700,6 +731,61 @@
     overflow: hidden;
     padding: 0;
   }
+
+  .pl_pager {
+    border: 1px solid @greyLight;
+    margin: 0;
+    padding: 15px;
+    
+    .btn_next {
+      float: right;
+    }
+
+    .btn_prev {
+      float: left;
+    }
+
+    .pl_pages {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+  }
+
+  .pl_recap {
+    background-color: @greyLightest2;
+    border: 1px solid @greyLight;
+    border-top: none;
+    color: @greyFontlight;
+    margin: 0;
+    overflow: hidden;
+    padding: 15px;
+
+    .pl_r_info {
+      float: left;
+      width: 55%;
+    }
+
+    .pl_r_title {
+      font-family: @Sans;
+    }
+
+    .pl_r_detail {
+      font-style: italic;
+      margin: 0;
+    }
+    
+    .pl_r_actions {
+      float: right;
+      text-align: right;
+      width: 30%;
+
+      .btn {
+        margin-bottom: 5px;
+      }
+    }
+
+  }
 }
 
 .listing_unit {
@@ -714,9 +800,9 @@
 
   &:before,
   &:after {
-    .gradient(@greyLight, @white, 50%);
+    .gradient(@greyLight, @white, 50%, 90%);
     content: " ";
-    height: 180px;
+    height: 100%;
     position: absolute;
     top: 0;
     width: 1px;
@@ -729,12 +815,24 @@
     right: 0;
   }
 
+  .lu_id {
+    background-color: @greyLightest;
+    border: 1px solid @greyLight;
+    color: @greyFontlighter2;
+    font-size: 10px;
+    padding: 5px 10px; 
+    position: absolute;
+    right: 0;
+    top: -1px;
+  }
+
   .lu_details {
     float: right;
     width: 66%;
   }
 
   .lu_title {
+    color: @greyFont;
     font-size: 1.65em;
     margin: 0;
   }
@@ -773,6 +871,7 @@
     border: 1px solid @greyLight2;
     float: right;
     height: 35px;
+    margin-top: 10px;
     padding: 0 3px;
   }
 
@@ -784,11 +883,14 @@
       margin: 0 10px 0 0;
       padding: 0 0 0 7px;
       position: relative;
-      width: 50px;
+      width: 45px;
 
       &:first-child {
         padding: 0;
-        width: 80px;
+        width: 60px;
+      }
+      &:last-child { 
+        width: 30px;
       }
       &:before {
         .verticalGradient_3hops;
@@ -814,16 +916,23 @@
     }
   }
 
+  .lu_actions {
+    float: right;
+    margin-top: 10px;
+  }
+
   .lu_img_wrapper {
     float: left;
     position: relative;
 
     .lu_iw_thumbnail {
+      border: 1px solid @grey;
       display: block;
+      height: 145px;
       overflow: hidden;
+      width: 220px;
       
       img {
-        border: 1px solid @grey;
         display: block;
       }
     }
@@ -859,6 +968,57 @@
 
   }
 }
+
+.listing_unit.removed {
+
+  .lu_details {
+    color: @greyFontBright;
+    width: 83.5%;
+  }
+
+  .lu_title {
+    font-size: 1.25em;
+    font-weight: 700;
+  }
+
+  .lu_characteristics {
+    float: left;
+    margin-top: 20px;
+
+    .lu_c_section {
+      display: inline;
+      width: auto;
+    }
+    
+    .lu_c_label {
+      color: @greyFontBright;
+      display: inline;
+      font-size: 1em;
+      font-weight: 400;
+    }
+
+    .lu_c_value {
+      font-size: 1em;
+    }
+  }
+
+  .lu_img_wrapper {
+
+    .lu_iw_thumbnail {
+      border-color: @greyLight;
+      height: 76px;
+      width: 100px;
+    }
+
+    img {
+      -webkit-filter: grayscale(1);
+      .opacity(.3);
+    }
+
+  }
+
+}
+
 
 
 

@@ -48,6 +48,11 @@
               com <span>2+ Quartos,</span> <span>2+ Banheiros,</span> <span>60-180m&sup2;,</span> <span>e piscina</span>
             </h2>
           </hgroup>
+
+          <div class="search_actions">
+            <button class="btn lightBlue small" title="Compartilhe esta pesquisa">Compartilhe esta pesquisa</button>
+            <button class="btn lightBlue small" title="Receba novas ofertas similares">Receba novas ofertas similares</button>
+          </div>
         </div>
         <!-- END Basic info component-->
       </header>
@@ -67,11 +72,26 @@
             </ul>
 
             <section class="overviewTab currentSection">
-              <div class="pager" style="height: 37px;"> <!-- temporal mientras copio esto de SP -->
-                Imoveis <strong>1 - 10 </strong> de <strong>4.218</strong>
+              <div class="sort_bar">
+                <p class="sb_section sb_items_count">
+                  Imoveis <strong>1 - 10 </strong> de <strong>4.218</strong>
+                </p>
+                <div class="sb_section sb_sort">
+                  <span class="sb_s_label">Ordenar por:</span>
+                  <div class="fake_select">
+                    <button class="btn grey small fake_trigger">Data da Publicacao</button>
+                    <select class="">
+                      <option selected="selected">Data da Publicacao</option>
+                      <option>Data da Publicacao</option>
+                      <option>Data da Publicacao</option>
+                      <option>Data da Publicacao</option>
+                    </select>
+                  </div>
+                </div>
+                
               </div>
               <aside class="featured_projects">
-                <h6 class="fp_title">- LANÇAMENTOS EN DESTAQUE -</h6>
+                <h6 class="fp_title">LANCAMENTOS EN DESTAQUE</h6>
                 <ul class="fp_units">
                   <li>
                     <a href="#">
@@ -127,10 +147,14 @@
                           <h6 class="lu_c_label">Banheiros</h6>
                           <strong class="lu_c_value">2</strong>
                         </li>
+                        <li class="lu_c_section">
+                          <h6 class="lu_c_label">Vagas</h6>
+                          <strong class="lu_c_value">--</strong>
+                        </li>
                       </ul>
-                      <div class="lu_actions">
-                        <button class="btn grey small" title="Save Property">&#9734;</button>
-                        <button class="btn grey small" title="Create Email Alert">&#9993;</button>
+                      <div class="lu_actions btn-group">
+                        <button class="btn grey small" title="Contatar anunciante">Contatar</button>
+                        <button class="btn grey small" title="Ver detalhes">Ver detalhes</button>
                       </div>
 
                     </div>
@@ -139,6 +163,7 @@
                         <img src="img/fpo/apartamento_fpo.png" alt="Apartamento">
                         <mark class="lu_iw_state">Na planta</mark>
                         <span class="lu_iw_photo_count">08</span>
+                        <span class="lu_iw_photo_count ">08</span>
                       </a>
                     </div>
                   </li>
@@ -172,10 +197,14 @@
                           <h6 class="lu_c_label">Banheiros</h6>
                           <strong class="lu_c_value">2</strong>
                         </li>
+                        <li class="lu_c_section">
+                          <h6 class="lu_c_label">Vagas</h6>
+                          <strong class="lu_c_value">--</strong>
+                        </li>
                       </ul>
-                      <div class="lu_actions">
-                        <button class="btn grey small" title="Save Property">&#9734;</button>
-                        <button class="btn grey small" title="Create Email Alert">&#9993;</button>
+                      <div class="lu_actions btn-group">
+                        <button class="btn grey small" title="Contatar anunciante">Contatar</button>
+                        <button class="btn grey small" title="Ver detalhes">Ver detalhes</button>
                       </div>
                     </div>
                     <div class="lu_img_wrapper">
@@ -187,12 +216,89 @@
                     </div>
                   </li>
 
+                  <li class="listing_unit removed">
+                    <div class="lu_details">
+                      <small class="lu_id">ID: <strong>VR04354567</strong></small>
+                      <h2 class="lu_title">
+                        Removed from the system on 12.01.2012
+                      </h2>
+                      <h4 class="lu_address">
+                        House for Sale - Saint Louis - Ponta D’areia II
+                      </h4>
+                      <ul class="lu_characteristics">
+                        <li class="lu_c_section">
+                          <h6 class="lu_c_label">Area</h6>
+                          <strong class="lu_c_value">56m&sup2;</strong>
+                        </li>
+                        <li class="lu_c_section">
+                          <h6 class="lu_c_label">Quartos</h6>
+                          <strong class="lu_c_value">2</strong>
+                        </li>
+                        <li class="lu_c_section">
+                          <h6 class="lu_c_label">Suites</h6>
+                          <strong class="lu_c_value">0</strong>
+                        </li>
+                        <li class="lu_c_section">
+                          <h6 class="lu_c_label">Banheiros</h6>
+                          <strong class="lu_c_value">2</strong>
+                        </li>
+                        <li class="lu_c_section">
+                          <h6 class="lu_c_label">Vagas</h6>
+                          <strong class="lu_c_value">--</strong>
+                        </li>
+                      </ul>
+                      <div class="lu_actions btn-group">
+                        <button class="btn grey small" title="View Similar Properties">View Similar Properties</button>
+                      </div>
+                    </div>
+                    <div class="lu_img_wrapper">
+                      <a class="lu_iw_thumbnail" href="#" title="">
+                        <img src="img/fpo/casa_fpo.png" alt="Casa">
+                      </a>
+                    </div>
+                  </li>
+
                 </ul>
                 <nav class="pl_pager">
-                  <a href="#" class="btn grey btn_prev" title="Anterior">Anterior</a>
                   <a href="#" class="btn grey btn_next" title="Seguinte">Seguinte</a>
-                  <ul class="pl_pages"></ul>
+                  <a href="#" class="btn grey btn_prev" title="Anterior">Anterior</a>
+                  <div class="pl_pages btn-toolbar">
+
+                    <div class="lu_actions btn-group">
+                      <button class="btn grey" title="Pagina 1">1</button>
+                    </div>
+
+                    <div class="lu_actions btn-group">
+                      <button class="btn grey" title="Pagina 11">11</button>
+                      <button class="btn grey current" title="Pagina 12">12</button>
+                      <button class="btn grey" title="Pagina 13">13</button>
+                      <button class="btn grey" title="Pagina 14">14</button>
+                      <button class="btn grey" title="Pagina 15">15</button>
+                      <button class="btn grey" title="Pagina 16">16</button>
+                    </div>
+
+                    <div class="lu_actions btn-group">
+                      <button class="btn grey" title="Pagina 30">30</button>
+                    </div>
+
+                  </div>
+
                 </nav>
+
+                <div class="pl_recap">
+                  <div class="pl_r_info">
+                    <h6 class="pl_r_title">
+                      PESQUISA ATUAL
+                    </h6>
+                    <p class="pl_r_detail">
+                      <strong>Apartamento a Venda, Americanopolis</strong> Sao Paulo com 2+ Quartos, 2+ Banheiros, 60-180m&sup2; 
+                    </p>
+                  </div>
+                  <div class="pl_r_actions">
+                    <button class="btn grey small" title="Compartilhe esta pesquisa">Compartilhe esta pesquisa</button>
+                    <button class="btn grey small" title="Receba novas ofertas similares">Receba novas ofertas similares</button>
+                  </div>
+                </div>
               </div>
             </section>
             <!-- /.overviewTab -->
@@ -227,7 +333,7 @@
                     Americanopolis <span class="fs_filter_count">(214.475)</span>
                   </li>
                 </ul>
-                <button class="btn dark">Adicionar localizacao</button>
+                <button class="btn dark small">Adicionar localizacao</button>
               </div>
             </section>
 
@@ -235,7 +341,7 @@
               <h5 class="fs_section_title">Tipo de imovel</h5>
               <div class="fs_section_content">
                 <div class="fake_select">
-                  <button class="btn dark fake_trigger">Apartamentos <span class="fs_filter_count">(214.475)</span></button>
+                  <button class="btn dark small fake_trigger">Apartamentos <span class="fs_filter_count">(214.475)</span></button>
                   <select class="">
                     <optgroup label="Residencial"> 
                       <option name="apartamento_residencial" value="APART_RESIDENCIAL" selected="selected">Apartamento <span class="fs_filter_count">(214.475)</span></option> 
@@ -266,7 +372,7 @@
               <h5 class="fs_section_title">Quartos</h5>
               <div class="fs_section_content">
                 <div class="fake_select">
-                  <button class="btn dark fake_trigger">2+</button>
+                  <button class="btn dark small fake_trigger">2+</button>
                   <select class=""> 
                     <option selected="selected">1+</option>
                     <option >2+</option>
@@ -282,7 +388,7 @@
               <h5 class="fs_section_title">Banheiros</h5>
               <div class="fs_section_content">
                 <div class="fake_select">
-                  <button class="btn dark fake_trigger">2+</button>
+                  <button class="btn dark small fake_trigger">2+</button>
                   <select class=""> 
                     <option selected="selected">1+</option>
                     <option >2+</option>
@@ -298,7 +404,7 @@
               <h5 class="fs_section_title">Vagas</h5>
               <div class="fs_section_content">
                 <div class="fake_select">
-                  <button class="btn dark fake_trigger">2+</button>
+                  <button class="btn dark small fake_trigger">2+</button>
                   <select class=""> 
                     <option selected="selected">1+</option>
                     <option >2+</option>
@@ -327,12 +433,168 @@
                 </div>
               </div>
             </section>
-
-            
           </div>
           <!-- /.filterSearch -->
+
+          <a href="#" class="banner_like banner_notifications btn">
+            <h5 class="bn_title">
+              Quero receber novas ofertas
+            </h5>
+            <p class="bn_content">com base nesta pesquisa</p>
+            <em class="bn_channel">Notificacao por e-mail</em>
+          </a>
+
+          <a href="#" class="banner_like banner_projects btn">
+            <h5 class="bn_title">
+              Ver ofertas <br/>
+              de Lancamentos
+            </h5>
+            <p class="bn_content">com características similares a esta pesquisa</p>
+            <ul class="bn_thumbs">
+              <li class="bn_thumb"><img src="img/core/banner_thumb_1.jpg" alt="banner thumbnail #1"></li>
+              <li class="bn_thumb"><img src="img/core/banner_thumb_2.jpg" alt="banner thumbnail #2"></li>
+              <li class="bn_thumb"><img src="img/core/banner_thumb_3.jpg" alt="banner thumbnail #3"></li>
+            </ul>
+          </a>
+          
+          <div class="publicidad">
+            <h6>Publicidade</h6>
+            <img src="img/fpo/ad_vertical_fpo.png" />
+          </div>
+          <!-- /.publicidad -->
+
         </aside>
         <!-- /.col .short -->
+
+        <div class="carrusel grey_box">
+          <h3 class="c_title gb_title">Anunciantes em Destaque <span>no São Paulo</span></h3>
+          <div id="carouselWrapper" class="sliderTopInmobiliarias gb_content" data-location="BR&gt;Sao Paulo&gt;NULL&gt;Sao Paulo">
+            <ul style="display: block;">
+              <li>
+                <a href="/39887/zona-leste-imoveis/" title="Zona Leste Imóveis">
+                  <img src="http://imgs.vivareal.com/7f1d0939a9974ba7fe1ff76f16f0297d.jpg" alt="Zona Leste Imóveis" width="119" height="55">
+                </a>
+              </li>
+              <li>
+                <a href="/7470/pronto---sao-paulo/" title="Pronto - São Paulo">
+                  <img src="http://imgs.vivareal.com/0c32b55d905a69971514c281926b299c.jpg" alt="Pronto - São Paulo" width="119" height="55">
+                </a>
+              </li>
+              <li>
+                <a href="/44248/cheidith-imoveis/" title="Cheidith imóveis">
+                  <img src="http://imgs.vivareal.com/f189f36a8b2f4e451ed3530fc90edb43.jpg" alt="Cheidith imóveis" width="119" height="55">
+                </a>
+              </li>
+              <li>
+                <a href="/41019/local-imoveis---business/" title="Local Imóveis - Business">
+                  <img src="http://imgs.vivareal.com/7997bd8460a3150bc700dd297c935543.jpg" alt="Local Imóveis - Business" width="119" height="55">
+                </a>
+              </li>
+              <li>
+                <a href="/35679/sobral-imoveis/" title="Sobral Imóveis">
+                  <img src="http://imgs.vivareal.com/827edbf85c40c0c4f4413aecf20aac77.jpg" alt="Sobral Imóveis" width="119" height="55">
+                </a>
+              </li>
+              <li>
+                <a href="/12313/prontocondessa/" title="Pronto!Condessa">
+                  <img src="http://imgs.vivareal.com/643757829bb684494b12a1df1056a2ec.jpg" alt="Pronto!Condessa" width="119" height="55">
+                </a>
+              </li>
+            </ul>
+            <a class="prev" id="top_prev" href="javascript:;" title="Anterior">Anterior</a>
+            <a class="next" id="top_next" href="javascript:;" title="Próximo">Próximo</a>
+          </div>
+          <!-- /.sliderTopInmobiliarias -->
+        </div>
+        <!-- /.carrusel -->
+
+        <div class="ubicacionesPop">
+          <div class="grey_box col halfLeft">
+            <h3 class="gb_title">Cidades próximas <span>ao São Paulo</span></h3>
+            <ul class="gb_content tag_cloud tag_2_rows">
+              <li><a class="tc_tag" href="/venda/sp/jundiai/">Jundiaí</a></li>
+              <li><a class="tc_tag" href="/venda/sp/caraguatatuba/">Caraguatatuba</a></li>
+              <li><a class="tc_tag" href="/venda/sp/cotia/">Cotia</a></li>
+              <li><a class="tc_tag" href="/venda/sp/santo-andre/">Santo André</a></li>
+              <li><a class="tc_tag" href="/venda/sp/sao-bernardo-do-campo/">São Bernardo do Campo</a></li>
+              <li><a class="tc_tag" href="/venda/sp/atibaia/">Atibaia</a></li>
+              <li><a class="tc_tag" href="/venda/sp/bertioga/">Bertioga</a></li>
+              <li><a class="tc_tag" href="/venda/sp/ibiuna/">Ibiúna</a></li>
+              <li><a class="tc_tag" href="/venda/sp/guarulhos/">Guarulhos</a></li>
+              <li><a class="tc_tag" href="/venda/sp/caieiras/">Caieiras</a></li>
+              <li><a class="tc_tag" href="/venda/sp/osasco/">Osasco</a></li>
+              <li><a class="tc_tag" href="/venda/sp/guararema/">Guararema</a></li>
+              <li><a class="tc_tag" href="/venda/sp/taboao-da-serra/">Taboão da Serra</a></li>
+            </ul>
+            <!-- /.popCities .tag_cloud -->
+          </div>
+          <!-- /.col .halfLeft -->
+
+          <div class="grey_box col halfRight">
+            <h3 class="gb_title">Bairros em destaque <span>em São Paulo</span></h3>
+            <ul class="gb_content tag_cloud tag_2_rows">
+              <li><a class="tc_tag" href="/venda/sp/sao-paulo/zona-sul/ipiranga/">Ipiranga</a></li>
+              <li><a class="tc_tag" href="/venda/sp/sao-paulo/zona-norte/santana/">Santana</a></li>
+              <li><a class="tc_tag" href="/venda/sp/sao-paulo/zona-sul/campo-belo/">Campo Belo</a></li>
+              <li><a class="tc_tag" href="/venda/sp/sao-paulo/zona-sul/saude/">Saúde</a></li>
+              <li><a class="tc_tag" href="/venda/sp/sao-paulo/zona-sul/morumbi/">Morumbi</a></li>
+              <li><a class="tc_tag" href="/venda/sp/sao-paulo/zona-sul/brooklin/">Brooklin</a></li>
+              <li><a class="tc_tag" href="/venda/sp/sao-paulo/zona-sul/moema/">Moema</a></li>
+              <li><a class="tc_tag" href="/venda/sp/sao-paulo/zona-leste/tatuape/">Tatuapé</a></li>
+              <li><a class="tc_tag" href="/venda/sp/sao-paulo/zona-oeste/perdizes/">Perdizes</a></li>
+              <li><a class="tc_tag" href="/venda/sp/sao-paulo/zona-leste/mooca/">Móoca</a></li>
+              <li><a class="tc_tag" href="/venda/sp/sao-paulo/zona-sul/vila-mariana/">Vila Mariana</a></li>
+              <li><a class="tc_tag" href="/venda/sp/sao-paulo/zona-oeste/pinheiros/">Pinheiros</a></li>
+            </ul>
+            <!-- /.popNeigh .tag_cloud -->
+          </div>
+          <!-- /.col .halfRight -->
+        </div>
+        <!-- /.ubicacionesPop -->
+
+        <div class="grey_box horizontalList">
+          <h3 class="gb_title">Cidades mais populares <span>em São Paulo</span></h3>
+          <ul class="gb_content tag_cloud">
+            <li><a class="tc_tag" href="/venda/sp/sao-paulo/">São Paulo</a></li>
+            <li><a class="tc_tag" href="/venda/sp/sao-bernardo-do-campo/">São Bernardo do Campo</a></li>
+            <li><a class="tc_tag" href="/venda/sp/praia-grande/">Praia Grande</a></li>
+            <li><a class="tc_tag" href="/venda/sp/campinas/">Campinas</a></li>
+            <li><a class="tc_tag" href="/venda/sp/santo-andre/">Santo André</a></li>
+          </ul>
+        </div>
+        <!-- /.popularCities .horizontalList -->
+        
+        <div class="publicidad">
+          <h6>Publicidade</h6>
+          <img src="img/fpo/ad_horizontal_fpo.png" />
+        </div>
+        <!-- /.publicidad -->
+
+        <div class="description"> 
+          <h2 class="d_title">Imóveis em São Paulo - SP</h2>
+          <p> 
+            Localizada na Região Sudeste do Brasil, a <a href="http://www.cidadedesaopaulo.com/" target="”_blank”">cidade de São Paulo</a> é um grande centro econômico, financeiro e empresarial, e oferece uma infinidade de opções para os investimentos imobiliários. Diariamente a cidade recebe milhares de turistas, executivos, investidores e potenciais compradores de imóveis, devido à sua grande importância econômica, além da grande variedade de oportunidades de aquisições imobiliárias. Isso faz de São Paulo a cidade perfeita para se anunciar imóveis à venda. Encontre apartamentos, flats, escritórios, salas comerciais e casas em São Paulo. 
+          </p>
+          <p>
+            Compre imóveis em qualquer região da Grande São Paulo e veja as diversas oportunidades de compra de imóveis que a cidade oferece. Conheça opções variadas para seus investimentos imobiliários, de imóveis para uso próprio, assim como imóveis para geração de renda.
+           Agora é a hora de comprar seus imóveis em São Paulo, pois com a Copa do Mundo de 2014 e as Olimpíadas de 2016, os imóveis de São Paulo tenderão a valorizar. Além desses eventos, há a ampliação das marginais, a construção do Rodoanel e também a ampliação do metrô. Tudo isso faz com que adquirir imóveis à venda em SP seja um ótimo negócio.
+           Veja nossas listas de imóveis em bairros como Morumbi, Jardins, <a href="/venda/sp/sao-paulo/zona-sul/moema/">Moema</a>, Itaim, <a href="/venda/sp/sao-paulo/zona-sul/santo-amaro/">Santo Amaro</a>, Pinheiros, Higienópolis, Bela Vista, Vila Mariana, Mooca, Tatuapé, Lapa, Santana e Liberdade, além de muitos outros imóveis em São Paulo. </p>
+           <p>Conheça imóveis à venda das melhores imobiliárias de São Paulo. Pode-se achar <a href="/venda/sp/sao-paulo/zona-sul/">imóveis na zona sul SP</a>, <a href="/venda/sp/sao-paulo/zona-oeste/">zona oeste SP</a>, <a href="/venda/sp/sao-paulo/zona-leste/">zona leste SP</a>, <a href="/venda/sp/sao-paulo/zona-norte/">zona norte SP</a> e imóveis <a href="/venda/sp/sao-paulo/centro/">no centro de SP</a>.  Anuncie seus imóveis à venda em São Paulo - SP. Aqui você pode encontrar imóvel em condomínio fechado, imóveis bonitos, imóvel mobiliado, imóvel com financiamento pelo CDHU e também imóvel financiado pela Caixa econômica Federal (CEF). Encontre também imóveis na planta e <a href="/imoveis-lancamento/sao-paulo/">imóveis novos em São Paulo</a>.
+          </p>
+          <div itemscope="" itemtype="http://schema.org/LocalBusiness">
+            <span itemprop="name">VivaReal São Paulo</span>
+            <div itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+            <span itemprop="streetAddress">Rua da Consolação, 1681,  cj 63</span>,
+            <span itemprop="addressLocality">São Paulo</span>,
+            <span itemprop="addressRegion">SP</span>
+            <span itemprop="postalCode">01301-100</span>
+            </div>
+            Phone: <span itemprop="telephone">(11) 3150-4646</span>
+          </div>
+          <!-- / seo address -->
+
+        </div>
+        <!-- /.description -->
 
       </div>
       <!-- /.wrapped .clearfix -->
