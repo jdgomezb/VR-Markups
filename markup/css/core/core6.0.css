@@ -1,6 +1,6 @@
-@import url("http://fonts.googleapis.com/css?family=Droid+Sans:400,700");
+@import url("//fonts.googleapis.com/css?family=Droid+Sans:400,700");
 
-@import url("http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic");
+@import url("//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic");
 /*! normalize.css v1.0.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -440,6 +440,11 @@ table caption {
 /* ==========================================================================
    General Variables
    ========================================================================== */
+.hideText {
+  text-indent: 200%;
+  white-space: nowrap;
+  overflow: hidden;
+}
 /* social Media */
 /* Facebook */
 .fbGrad {
@@ -1933,6 +1938,7 @@ small.mandatory {
 .inputWrapper.search {
   background: #e9e9e9 url(../../img/core/icn_form_search.png) no-repeat 15px top;
 }
+input.error,
 .inputWrapper.error {
   background-color: #ffffc4 !important;
   background-position: 10px bottom!important;
@@ -2180,11 +2186,15 @@ form .errorMsg {
 .contactForm .btnSet small {
   display: block;
   color: #999999;
+  font-family: 'Droid Sans', Arial, sans-serif;
   font-size: 0.8em;
+  line-height: 1.0em;
   padding: 0;
   text-align: center;
-  line-height: 1.0em;
-  font-family: 'Droid Sans', Arial, sans-serif;
+}
+aside .contactForm .btnSet small {
+  clear: both;
+  float: left;
 }
 /* @group ASIDE FORM */
 aside .contactForm {
@@ -2192,13 +2202,16 @@ aside .contactForm {
   padding: 10px 20px 15px;
   width: auto;
 }
+aside .contactForm.withMortgage {
+  margin: 0;
+}
 .developments aside .contactForm {
   margin-top: -110px;
 }
 aside .contactForm h3 {
   float: none;
   font-size: 1.3em !important;
-  padding: 0 0 15px 0;
+  padding: 0 0 10px 0;
   text-align: center;
 }
 aside .contactForm header .btn {
@@ -2418,6 +2431,240 @@ aside .contactForm .optOut input {
 .popupContainer .inputWrapper.comments textarea {
   height: 90px;
   color: #666666;
+}
+#mortgageForm {
+  position: relative;
+  margin-top: -15px;
+}
+#mortgageForm > div {
+  color: #62a0bc;
+  font-size: 12px;
+  margin-bottom: 2px;
+  text-align: right;
+}
+.btnMortgage {
+  font-size: 15px;
+  display: inline-block;
+  line-height: 27px;
+  min-width: 130px;
+}
+.btnMortgage:focus,
+.no-touch .btnMortgage:hover {
+  color: #659f37;
+  text-decoration: none;
+}
+.btnMortgage * {
+  display: inline-block;
+}
+.btnMortgage span {
+  text-indent: 200%;
+  white-space: nowrap;
+  overflow: hidden;
+  background: url(../../img/core/icn_calc.png) no-repeat top right;
+  border: 1px solid transparent;
+  border-bottom: none;
+  float: right;
+  height: 21px;
+  margin-left: 5px;
+  position: relative;
+  width: 27px;
+  z-index: 2;
+}
+.btnMortgage.selected span,
+.btnMortgage:hover span {
+  background-position: right -23px;
+  background-color: #fafafa;
+  border: 1px solid #cccccc;
+  box-shadow: 2px 0 0 rgba(102, 102, 102, 0.6);
+  border-bottom: none;
+  padding: 5px 0 4px;
+  margin-top: -3px;
+}
+#mortgageForm .mortageContent {
+  background-color: #ffffff;
+  display: none;
+  border: 1px solid #cccccc;
+  top: 27px;
+  right: 0;
+  box-shadow: 2px 2px 0 rgba(102, 102, 102, 0.6);
+  max-width: 314px;
+  margin-top: -1px;
+  position: absolute;
+  z-index: 1;
+}
+#mortgageForm h2 {
+  background: #fafafa;
+  color: #666666;
+  font-size: 16px;
+  font-family: 'Droid Serif', Georgia, Times, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 40px;
+  margin: 0px;
+  padding-left: 18px;
+  position: relative;
+}
+#mortgageForm h2:after {
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(235, 235, 235, 0)), color-stop(15%, #ebebeb), color-stop(85%, #ebebeb), color-stop(100%, rgba(235, 235, 235, 0)));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(left, rgba(235, 235, 235, 0) 0%, #ebebeb 15%, #ebebeb 85%, rgba(235, 235, 235, 0) 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -moz-linear-gradient(left, rgba(235, 235, 235, 0) 0%, #ebebeb 15%, #ebebeb 85%, rgba(235, 235, 235, 0) 100%);
+  /* FF3.6+ */
+
+  background: -ms-linear-gradient(left, rgba(235, 235, 235, 0) 0%, #ebebeb 15%, #ebebeb 85%, rgba(235, 235, 235, 0) 100%);
+  /* IE10+ */
+
+  background: -o-linear-gradient(left, rgba(235, 235, 235, 0) 0%, #ebebeb 15%, #ebebeb 85%, rgba(235, 235, 235, 0) 100%);
+  /* Opera 11.10+ */
+
+  background: linear-gradient(to right, rgba(235, 235, 235, 0) 0%, #ebebeb 15%, #ebebeb 85%, rgba(235, 235, 235, 0) 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EBEBEB', endColorstr='#EBEBEB', GradientType=1);
+  /* IE6-9 */
+
+  bottom: 0;
+  content: '';
+  height: 1px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+#mortgageForm fieldset {
+  padding: 10px 0 0;
+}
+#mortgageForm fieldset > em {
+  color: #999999;
+  display: block;
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 17px;
+  text-align: center;
+}
+#mortgageForm p {
+  color: #333333;
+  clear: both;
+  line-height: 1em;
+  overflow: hidden;
+  margin: 0 0 8px;
+}
+#mortgageForm p.info {
+  padding-bottom: 13px;
+  margin-bottom: 0;
+}
+#mortgageForm label {
+  color: #999999;
+  float: left;
+  font-size: 11px;
+  font-style: normal;
+  line-height: 1em;
+  margin-right: 5px;
+  padding: 10px 0 0;
+  text-align: right;
+  width: 137px;
+}
+#mortgageForm p.info label {
+  padding-top: 0;
+}
+#mortgageForm p input {
+  margin: 0 5px 0 0;
+  font-size: 16px;
+  float: left;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+  width: 31px;
+}
+#mortgageForm .financingValue input {
+  width: 115px;
+  text-align: left;
+}
+#mortgageForm fieldset p strong {
+  font-size: 17px;
+  line-height: 32px;
+}
+#mortgageForm fieldset p span {
+  float: left;
+  line-height: 32px;
+}
+#mortgageForm #termsCaption {
+  max-width: 120px;
+}
+#mortgageForm #termsCaption.detailed {
+  line-height: 100%;
+}
+#mortgageForm fieldset #termsCaption strong {
+  color: #999999;
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 180%;
+}
+#mortgageForm footer {
+  background: none;
+  border: none;
+  float: left;
+  margin-top: 10px;
+  padding: 20px 0 10px;
+  position: relative;
+  width: 100%;
+}
+#mortgageForm .errorMsg {
+  display: block;
+  text-align: center!important;
+  padding: 8px 10px 0;
+  line-height: 100%;
+}
+#mortgageForm .errorMsg strong {
+  font-size: inherit;
+}
+#mortgageForm footer:after {
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(235, 235, 235, 0)), color-stop(15%, #ebebeb), color-stop(85%, #ebebeb), color-stop(100%, rgba(235, 235, 235, 0)));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(left, rgba(235, 235, 235, 0) 0%, #ebebeb 15%, #ebebeb 85%, rgba(235, 235, 235, 0) 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -moz-linear-gradient(left, rgba(235, 235, 235, 0) 0%, #ebebeb 15%, #ebebeb 85%, rgba(235, 235, 235, 0) 100%);
+  /* FF3.6+ */
+
+  background: -ms-linear-gradient(left, rgba(235, 235, 235, 0) 0%, #ebebeb 15%, #ebebeb 85%, rgba(235, 235, 235, 0) 100%);
+  /* IE10+ */
+
+  background: -o-linear-gradient(left, rgba(235, 235, 235, 0) 0%, #ebebeb 15%, #ebebeb 85%, rgba(235, 235, 235, 0) 100%);
+  /* Opera 11.10+ */
+
+  background: linear-gradient(to right, rgba(235, 235, 235, 0) 0%, #ebebeb 15%, #ebebeb 85%, rgba(235, 235, 235, 0) 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EBEBEB', endColorstr='#EBEBEB', GradientType=1);
+  /* IE6-9 */
+
+  content: '';
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+#mortgageForm footer input {
+  font-size: 16px;
+  float: left;
+  height: 45px;
+  margin: 0 0 0 10px;
+  padding: 0;
+  width: 175px;
+}
+#mortgageForm footer .btnLogo {
+  float: right;
+  margin-right: 5px;
+}
+#mortgageForm footer .btnLogo img {
+  max-height: 46px;
+  max-width: 110px;
 }
 .ui-widget-overlay {
   position: absolute;
@@ -2723,11 +2970,12 @@ aside .contactForm .optOut input {
   width: 800px;
 }
 .infoMsg .btnSet {
-  background: url(../../img/core/img-content-col-split.png) no-repeat top center;
+  /* background: url(../../img/core/img-content-col-split.png) no-repeat top center; */
+
   clear: both;
   float: left;
-  margin-top: 20px;
-  padding: 20px 0 0;
+  margin: 20px 0;
+  padding: 0;
   text-align: center;
   width: 100%;
 }
@@ -3183,6 +3431,20 @@ aside .contactForm .optOut input {
   float: none;
   margin: 0 auto;
 }
+/* @group POPUP footer */
+.popupContent footer {
+  background: #f9f9f9;
+  border-top: 1px dashed #d5d5d5;
+  color: #343125;
+  clear: both;
+  line-height: 50px;
+  padding: 10px 0 0;
+  text-align: center;
+}
+.popupContent footer a {
+  font-weight: bold;
+}
+/* @end */
 .popupContent .knownUser {
   color: #5d5d5d;
   font-family: 'Droid Serif', Georgia, Times, "Times New Roman", serif;
@@ -5628,6 +5890,7 @@ ul.liCatD {
   margin: 0 0 10px;
 }
 .banner_like .bn_channel {
+  font-family: 'Droid Serif', Georgia, Times, "Times New Roman", serif;
   font-size: .9em;
 }
 .banner_like .bn_channel:before,
@@ -5687,6 +5950,15 @@ ul.liCatD {
   padding: 0 20px;
 }
 /* DETAIL PAGE */
+/* HEADER */
+#content .detail > header {
+  background: #7ccbee url(../../img/core/bg-developments-header3.jpg) bottom left repeat-x;
+  height: 335px;
+  color: #ffffff;
+}
+#content .detail > header.short {
+  height: 280px;
+}
 /* Breadcrumb */
 .breadcrumb {
   background: #ffffff;
@@ -6497,12 +6769,14 @@ header .location .no_arrow {
 .asideBar .contactForm .Tel {
   display: block;
   clear: both;
+  margin-bottom: 10px;
   width: 100%;
 }
 .asideBar .contactForm .btnToolTel {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 10px 12px !important;
+  text-align: center;
   width: 100%;
 }
 .showroomLocation {
@@ -6841,6 +7115,34 @@ header .location .no_arrow {
   float: left;
 }
 /* @group Characteristics */
+.developContentTabs {
+  margin: 0 0 20px;
+  padding-top: 15px;
+}
+.developContentTabs section {
+  border: 1px solid #e9e9e9;
+  color: #666666;
+  padding: 20px;
+}
+.developContentTabs h2,
+.developContentTabs h3 {
+  color: #666666;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0 0 0.8em;
+}
+.developContentTabs .descTitle {
+  font-style: italic;
+  font-weight: 700;
+}
+.developContentTabs p {
+  color: #777777;
+  font-size: 1em;
+  margin: 0 0 1.5em;
+}
+.developContentTabs .introText {
+  overflow: hidden;
+}
 .propertyFeatures {
   clear: both;
 }
@@ -8450,6 +8752,9 @@ header .location .no_arrow {
   font-size: 1.65em;
   margin: 0;
 }
+.listing_unit .lu_title a {
+  color: #666666;
+}
 .listing_unit .lu_price {
   float: right;
 }
@@ -8471,15 +8776,23 @@ header .location .no_arrow {
   color: #848484;
   font-family: 'Droid Sans', Arial, sans-serif;
   font-size: .85em;
+  min-height: 50px;
   margin: 15px 0;
   width: 340px;
 }
 .listing_unit .lu_broker_logo {
   border: 1px solid #eeeeee;
+  color: #999999;
   float: right;
+  font-size: .8em;
   height: 35px;
+  line-height: 35px;
   margin-top: 10px;
+  overflow: hidden;
   padding: 0 3px;
+  text-overflow: ellipsis;
+  max-width: 100px;
+  white-space: nowrap;
 }
 .listing_unit .lu_characteristics .lu_c_section {
   float: left;
@@ -8537,7 +8850,6 @@ header .location .no_arrow {
 }
 .listing_unit .lu_actions {
   float: right;
-  margin-top: 10px;
 }
 .listing_unit .lu_img_wrapper {
   float: left;
@@ -8557,27 +8869,42 @@ header .location .no_arrow {
   display: none;
   position: absolute;
 }
-.listing_unit .lu_img_wrapper .lu_iw_photo_count {
+.listing_unit .lu_img_wrapper .lu_iw_count {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.5);
   bottom: 1px;
   color: #ffffff;
   font-size: .85em;
-  height: 32px;
+  height: 30px;
   left: 1px;
-  padding: 09px 0 0 35px;
+  padding: 09px 0 0 30px;
   position: absolute;
-  width: 60px;
+  width: 55px;
 }
-.listing_unit .lu_img_wrapper .lu_iw_photo_count:before {
-  background: url(../../img/core/icn_photo_count.png) no-repeat 0 0;
+.listing_unit .lu_img_wrapper .lu_iw_count + .lu_iw_count {
+  left: 56px;
+  padding-left: 20px;
+  width: 45px;
+}
+.listing_unit .lu_img_wrapper .lu_iw_count:before {
+  background-position: 0 0;
+  background-repeat: no-repeat;
   content: "";
   height: 12px;
   left: 13px;
   position: absolute;
   top: 10px;
   width: 17px;
+}
+.listing_unit .lu_img_wrapper .lu_iw_count + .lu_iw_count:before {
+  left: 0;
+}
+.listing_unit .lu_img_wrapper .photo_count:before {
+  background-image: url(../../img/core/icn_photo_count.png);
+}
+.listing_unit .lu_img_wrapper .video_count:before {
+  background-image: url(../../img/core/icn_video_count.png);
 }
 .listing_unit.removed .lu_details {
   color: #cccccc;
@@ -9737,7 +10064,7 @@ dd.taxIcn {
   font-size: 20px;
   line-height: 26px;
   margin: -5px 0 0;
-  padding: 0 0 20px 30px;
+  padding: 0 0 0px 30px;
   position: relative;
 }
 .signUp aside h4:after {
@@ -9755,9 +10082,24 @@ dd.taxIcn {
   font-family: league-gothic, serif;
   font-weight: normal;
   line-height: 60px;
+  padding: 10px 0 0;
 }
 .signUp aside h4 span {
   font-weight: normal;
+}
+.signUp aside h4 strong > span {
+  display: block;
+  font-family: 'Droid Sans', Arial, sans-serif;
+  font-style: italic;
+  font-size: 21px;
+  font-weight: normal;
+  line-height: 25px;
+}
+.signUp aside h4 strong > small {
+  float: left;
+  font-size: 0.4em;
+  line-height: 24px;
+  padding-right: 5px;
 }
 .signUp aside > a,
 .signUp aside > p {
@@ -9768,6 +10110,12 @@ dd.taxIcn {
 }
 .signUp aside > p {
   color: #767676;
+  padding: 0 0 0 30px;
+}
+.signUp aside .promoNote {
+  font-style: italic;
+  font-weight: bold;
+  padding-bottom: 15px;
 }
 .signUpBenefits {
   font-family: 'Droid Sans', Arial, sans-serif;
@@ -9882,7 +10230,6 @@ dd.taxIcn {
 }
 .testimonials:before,
 .signUpBenefits:before,
-.signUp aside h4:after,
 .signUp aside ul:before {
   background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(188, 188, 188, 0)), color-stop(15%, #bcbcbc), color-stop(85%, #bcbcbc), color-stop(100%, rgba(188, 188, 188, 0)));
   /* Chrome,Safari4+ */

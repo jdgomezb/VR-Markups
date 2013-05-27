@@ -835,6 +835,10 @@
     color: @greyFont;
     font-size: 1.65em;
     margin: 0;
+
+    a {
+      color: @greyFont;
+    }
   }
 
   .lu_price {
@@ -863,16 +867,24 @@
     color: @greyFontlighter2;
     font-family: @Sans;
     font-size: .85em;
+    min-height: 50px;
     margin: 15px 0;
     width: 340px;
   }
 
   .lu_broker_logo {
     border: 1px solid @greyLight2;
+    color: @greyFontlighter;
     float: right;
+    font-size: .8em;
     height: 35px;
+    line-height: 35px;
     margin-top: 10px;
+    overflow: hidden;
     padding: 0 3px;
+    text-overflow: ellipsis;
+    max-width: 100px;
+    white-space: nowrap;
   }
 
   .lu_characteristics {
@@ -918,7 +930,6 @@
 
   .lu_actions {
     float: right;
-    margin-top: 10px;
   }
 
   .lu_img_wrapper {
@@ -942,28 +953,44 @@
       position: absolute;
     }
 
-    .lu_iw_photo_count {
+    .lu_iw_count {
       -moz-box-sizing: border-box;
       box-sizing: border-box;
       background-color: rgba(0, 0, 0, .5);
       bottom: 1px;
       color: @white;
       font-size: .85em;
-      height: 32px;
+      height: 30px;
       left: 1px;
-      padding: 09px 0 0 35px;
+      padding: 09px 0 0 30px;
       position: absolute;
-      width: 60px;
+      width: 55px;
+    }
+    .lu_iw_count + .lu_iw_count {
+      left: 56px;
+      padding-left: 20px;
+      width: 45px;
     }
 
-    .lu_iw_photo_count:before {
-      background: url(../../img/core/icn_photo_count.png) no-repeat 0 0;
+    .lu_iw_count:before {
+      background-position: 0 0;
+      background-repeat: no-repeat;
       content: "";
       height: 12px;
       left: 13px;
       position: absolute;
       top: 10px;
       width: 17px;
+    }
+    .lu_iw_count + .lu_iw_count:before {
+      left: 0;
+    }
+
+    .photo_count:before {
+      background-image: url(../../img/core/icn_photo_count.png);
+    }
+    .video_count:before {
+      background-image: url(../../img/core/icn_video_count.png);
     }
 
   }

@@ -256,7 +256,7 @@
   font-size: 20px;
   line-height: 26px;
   margin: -5px 0 0;
-  padding: 0 0 20px 30px;
+  padding: 0 0 0px 30px;
   position: relative;
 }
 .signUp aside h4:after {
@@ -274,9 +274,24 @@
   font-family: league-gothic, serif;
   font-weight: normal;
   line-height: 60px;
+  padding: 10px 0 0;
 }
 .signUp aside h4 span {
   font-weight: normal;
+}
+.signUp aside h4 strong > span {
+  display: block;
+  font-family: @Sans;
+  font-style: italic;
+  font-size: 21px;
+  font-weight: normal;
+  line-height: 25px
+}
+.signUp aside h4 strong > small {
+  float: left;
+  font-size: 0.4em;
+  line-height: 24px;
+  padding-right: 5px;
 }
 .signUp aside > a,
 .signUp aside > p {
@@ -287,6 +302,12 @@
 }
 .signUp aside > p {
   color: #767676;
+  padding: 0 0 0 30px;
+}
+.signUp aside .promoNote {
+  font-style: italic;
+  font-weight: bold;
+  padding-bottom: 15px;
 }
 .signUpBenefits {
   font-family: @Sans;
@@ -402,7 +423,6 @@
 
 .testimonials:before,
 .signUpBenefits:before,
-.signUp aside h4:after,
 .signUp aside ul:before {
   .horizontalGradient;
 }

@@ -129,6 +129,7 @@ small.mandatory {
 .inputWrapper.search {
   background: @greyLight url(../../img/core/icn_form_search.png) no-repeat 15px top;
 }
+input.error,
 .inputWrapper.error {
   background-color: @errorBG!important;
   background-position: 10px bottom!important;
@@ -364,11 +365,15 @@ form .errorMsg {
 .contactForm .btnSet small {
   display: block;
   color: @greyFontlighter;
+  font-family: @Sans;
   font-size: 0.8em;
+  line-height: 1.0em;
   padding: 0;
   text-align: center;
-  line-height: 1.0em;
-  font-family: @Sans;
+}
+aside .contactForm .btnSet small {
+  clear: both;
+  float: left;
 }
 
 /* @group ASIDE FORM */
@@ -377,13 +382,16 @@ aside .contactForm {
   padding: @margin @margin*2 @marginBig;
   width: auto;
 }
+aside .contactForm.withMortgage {
+  margin: 0;
+}
 .developments aside .contactForm {
   margin-top: -110px;
 }
 aside .contactForm h3 {
   float: none;
   font-size: 1.3em !important;
-  padding: 0 0 @marginBig 0;
+  padding: 0 0 @margin 0;
   text-align: center;
 }
 aside .contactForm header .btn {
@@ -614,3 +622,199 @@ aside .contactForm .optOut {
   height: 90px;
   color: @greyFont;
 }
+
+
+//FINANCIAMENTO (MORTGAGE)
+#mortgageForm {
+  position: relative;
+  margin-top: -15px;
+}
+  #mortgageForm > div {
+    color: @blueLine;
+    font-size: 12px;
+    margin-bottom: 2px;
+    text-align: right;
+  }
+  .btnMortgage {
+    font-size: 15px;
+    display: inline-block;
+    line-height: 27px;
+    min-width: 130px;
+  }
+  .btnMortgage:focus,
+  .no-touch .btnMortgage:hover {
+    color: #659f37;
+    text-decoration: none;
+  }
+    .btnMortgage * {
+      display: inline-block;
+    }
+    .btnMortgage span {
+      .hideText;
+      background: url(../../img/core/icn_calc.png) no-repeat top right;
+      border: 1px solid transparent;
+      border-bottom: none;
+      float: right;
+      height: 21px;
+      margin-left: 5px;
+      position: relative;
+      width: 27px;
+      z-index: 2;
+    }
+    .btnMortgage.selected span,
+    .btnMortgage:hover span {
+      background-position: right -23px;
+      background-color: @greyLightest;
+      border: 1px solid @grey;
+      box-shadow: 2px 0 0 fadeout(@black3, 40%);
+      border-bottom: none;
+      padding: 5px 0 4px;
+      margin-top: -3px;
+    }
+  #mortgageForm .mortageContent {
+    background-color: @white;
+    display: none;
+    border: 1px solid @grey;
+    top: 27px;
+    right: 0;
+    box-shadow: 2px 2px 0 fadeout(@black3, 40%);
+    max-width: 314px;
+    margin-top: -1px;
+    position: absolute;
+    z-index: 1;
+  }
+  #mortgageForm h2 {
+    background: @greyLightest;
+    color: @black3;
+    font-size: 16px;
+    font-family: @Serif;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 40px;
+    margin: 0px;
+    padding-left: 18px;
+    position: relative;
+  }
+    #mortgageForm h2:after {
+      .horizontalGradientLight;
+      bottom: 0;
+      content: '';
+      height: 1px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+
+  #mortgageForm fieldset {
+    padding: 10px 0 0;
+  }
+    #mortgageForm fieldset > em {
+      color: @black4;
+      display: block;
+      font-size: 14px;
+      line-height: 22px;
+      margin-bottom: 17px;
+      text-align: center;
+    }
+    #mortgageForm p {
+      color: @greyFontDark;
+      clear: both;
+      line-height: 1em;
+      overflow: hidden;
+      margin: 0 0 8px;
+    }
+    #mortgageForm p.info {
+      padding-bottom: 13px;
+      margin-bottom: 0;
+    }
+    #mortgageForm label {
+      color: @greyFontlighter;
+      float: left;
+      font-size: 11px;
+      font-style: normal;
+      line-height: 1em;
+      margin-right: 5px;
+      padding: 10px 0 0;
+      text-align: right;
+      width: 137px;
+    }
+    #mortgageForm p.info label {
+      padding-top: 0;
+    }
+    #mortgageForm p input {
+      margin: 0 5px 0 0;
+      font-size: 16px;
+      float: left;
+      padding-left: 5px;
+      padding-right: 5px;
+      text-align: center;
+      width: 31px;
+    }
+    #mortgageForm .financingValue input {
+      width: 115px;
+      text-align: left;
+    }
+    #mortgageForm fieldset p strong {
+      font-size: 17px;
+      line-height: 32px;
+    }
+    #mortgageForm fieldset p span {
+      float: left;
+      line-height: 32px;
+    }
+    #mortgageForm #termsCaption {
+      max-width: 120px;
+    }
+    #mortgageForm #termsCaption.detailed {
+      line-height: 100%;
+    }
+    #mortgageForm fieldset #termsCaption strong {
+      color: @black4;
+      display: block;
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 180%;
+    }
+    #mortgageForm footer {
+      background: none;
+      border: none;
+      float: left;
+      margin-top: 10px;
+      padding: 20px 0 10px;
+      position: relative;
+      width: 100%;
+    }
+    #mortgageForm .errorMsg {
+      display: block;
+      text-align: center!important;
+      padding: 8px 10px 0;
+      line-height: 100%;
+    }
+    #mortgageForm .errorMsg strong {
+      font-size: inherit;
+    }
+      #mortgageForm footer:after {
+        .horizontalGradientLight;
+        content: '';
+        height: 1px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+      #mortgageForm footer input {
+        font-size: 16px;
+        float: left;
+        height: 45px;
+        margin: 0 0 0 10px;
+        padding: 0;
+        width: 175px;
+      }
+      #mortgageForm footer .btnLogo {
+        float: right;
+        margin-right: 5px;
+      }
+        #mortgageForm footer .btnLogo img {
+          max-height: 46px;
+          max-width: 110px;
+        }
