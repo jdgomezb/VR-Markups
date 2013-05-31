@@ -12,13 +12,13 @@
     <img src="img/fpo/header.jpg" height="90" style="margin: 0 auto; display: block;" />
   </div>
   <div id="content">
-    <div class="fullBackground">
+    <div class="fullBackground theme_green">
       <header class="short">     
         <div class="navWrapper">
           <div class="wrapped clearfix">
             <!-- BreadCrumb -->
             <div class="locationRoute">
-              <h4>Apartamentos  à Venda:</h4>
+              <h4>Apartamentos à Venda:</h4>
               <ul itemprop="breadcrumb">
                 <li>
                   <a href='/venda/sp/sao-paulo/apartamento_residencial/' title='136.251 Apartamentos  à Venda: São Paulo'>São Paulo (136.251)</a> /
@@ -42,16 +42,16 @@
               <strong>4.218</strong> ofertas imobiliarias
             </mark>
             <h1 class="sd_title">
-              Apartamento a Venda no Sao Paulo
+              Apartamento a Venda, Americanopolis,
             </h1>
             <h2 class="sd_characteristics">
-              com <span>2+ Quartos,</span> <span>2+ Banheiros,</span> <span>60-180m&sup2;,</span> <span>e piscina</span>
+              Sao Paulo com <span>2+ Quartos,</span> <span>2+ Banheiros,</span> <span>60-180m&sup2;,</span> <span>e piscina</span>
             </h2>
           </hgroup>
 
           <div class="search_actions">
-            <button class="btn lightBlue small" title="Compartilhe esta pesquisa">Compartilhe esta pesquisa</button>
-            <button class="btn lightBlue small" title="Receba novas ofertas similares">Receba novas ofertas similares</button>
+            <button class="btn lightGreen small shareSearch" title="Compartilhe esta pesquisa">Compartilhe esta pesquisa</button>
+            <button class="btn lightGreen small createNotification" title="Receba novas ofertas similares">Receba novas ofertas similares</button>
           </div>
         </div>
         <!-- END Basic info component-->
@@ -64,10 +64,10 @@
           <div class="contentTabs clearfix">
             <ul id="viewMapNearby" class="tab-container ligthBg">
               <li class="current">
-                <a class="dcOverview" href="#" title="Venda (4.218)">Venda (4.218)</a>
+                <a class="dcOverview" href="#" title="Venda">Venda</a>
               </li>
               <li>
-                <a class="dcOverview" href="#" title="Aluguel (4.218)">Aluguel (4.218)</a>
+                <a class="dcOverview" href="#" title="Aluguel">Aluguel</a>
               </li>
             </ul>
 
@@ -295,8 +295,8 @@
                     </p>
                   </div>
                   <div class="pl_r_actions">
-                    <button class="btn grey small" title="Compartilhe esta pesquisa">Compartilhe esta pesquisa</button>
-                    <button class="btn grey small" title="Receba novas ofertas similares">Receba novas ofertas similares</button>
+                    <button class="btn grey small shareSearch" title="Compartilhe esta pesquisa">Compartilhe esta pesquisa</button>
+                    <button class="btn grey small createNotification" title="Receba novas ofertas similares">Receba novas ofertas similares</button>
                   </div>
                 </div>
               </div>
@@ -310,30 +310,56 @@
         <!-- /.listProperties .col .right .big2 -->
 
         <aside class="col short">
-          <div class="filterSearch"> 
-            <h4 class="fs_title">Filtre sua busca</h4>
+          <div class="filterSearch theme_lightgrey"> 
+            <h4 class="fs_title">REFINE SUA PESQUISA</h4>
             <section class="fs_section">
               <h5 class="fs_section_title">Localizacao</h5>
               <div class="fs_section_content">
                 <ul class="fs_filter_list">
-                  <li class="fs_applied_filter">
-                    <button class="fs_remove_filter">&times;</button>
-                    SP <span class="fs_filter_count">(214.475)</span>
+                  <li>
+                    <span class="fs_applied_label">Estado</span>
+                    <button class="fs_applied_filter">
+                      <span class="fs_remove_filter">&times;</span>
+                      SP <span class="fs_filter_count"></span>
+                    </button>
                   </li>
-                  <li class="fs_applied_filter">
-                    <button class="fs_remove_filter">&times;</button>
-                    Sao Paulo <span class="fs_filter_count">(214.475)</span>
+                  <li>
+                    <span class="fs_applied_label">Ciudade</span>
+                    <button class="fs_applied_filter">
+                      <span class="fs_remove_filter">&times;</span>
+                      Sao Paulo <span class="fs_filter_count"></span>
+                    </button>
                   </li>
-                  <li class="fs_applied_filter">
-                    <button class="fs_remove_filter">&times;</button>
-                    Zona Sul <span class="fs_filter_count">(214.475)</span>
+                  <li>
+                    <span class="fs_applied_label">Regiao</span>
+                    <button class="fs_applied_filter">
+                      <span class="fs_remove_filter">&times;</span>
+                      Zona Sul <span class="fs_filter_count"></span>
+                    </button>
                   </li>
-                  <li class="fs_applied_filter">
-                    <button class="fs_remove_filter">&times;</button>
-                    Americanopolis <span class="fs_filter_count">(214.475)</span>
+                  <li>
+                    <span class="fs_applied_label">Bairro</span>
+                    <div class="fs_applied_multiple">
+                      <button class="fs_applied_filter">
+                        <span class="fs_remove_filter">&times;</span>
+                        Morumbi <span class="fs_filter_count"></span>
+                      </button>
+                      <button class="fs_applied_filter">
+                        <span class="fs_remove_filter">&times;</span>
+                        Moema <span class="fs_filter_count"></span>
+                      </button>
+                      <button class="fs_applied_filter">
+                        <span class="fs_remove_filter">&times;</span>
+                        Campo Bello <span class="fs_filter_count"></span>
+                      </button>
+                      <button class="fs_applied_filter">
+                        <span class="fs_remove_filter">&times;</span>
+                        Interlagos <span class="fs_filter_count"></span>
+                      </button>
+                    </div>
                   </li>
                 </ul>
-                <button class="btn dark small">Adicionar localizacao</button>
+                <button class="btn grey small">Adicionar localizacao</button>
               </div>
             </section>
 
@@ -341,7 +367,7 @@
               <h5 class="fs_section_title">Tipo de imovel</h5>
               <div class="fs_section_content">
                 <div class="fake_select">
-                  <button class="btn dark small fake_trigger">Apartamentos <span class="fs_filter_count">(214.475)</span></button>
+                  <button class="btn grey small fake_trigger">Apartamentos <span class="fs_filter_count">(214.475)</span></button>
                   <select class="fs_select">
                     <optgroup label="Residencial"> 
                       <option name="apartamento_residencial" value="APART_RESIDENCIAL" selected="selected">Apartamento <span class="fs_filter_count">(214.475)</span></option> 
@@ -372,7 +398,7 @@
               <h5 class="fs_section_title">Quartos</h5>
               <div class="fs_section_content">
                 <div class="fake_select">
-                  <button class="btn dark small fake_trigger">2+</button>
+                  <button class="btn grey small fake_trigger">2+</button>
                   <select class=""> 
                     <option selected="selected">1+</option>
                     <option >2+</option>
@@ -388,7 +414,7 @@
               <h5 class="fs_section_title">Banheiros</h5>
               <div class="fs_section_content">
                 <div class="fake_select">
-                  <button class="btn dark small fake_trigger">2+</button>
+                  <button class="btn grey small fake_trigger">2+</button>
                   <select class=""> 
                     <option selected="selected">1+</option>
                     <option >2+</option>
@@ -404,7 +430,7 @@
               <h5 class="fs_section_title">Vagas</h5>
               <div class="fs_section_content">
                 <div class="fake_select">
-                  <button class="btn dark small fake_trigger">2+</button>
+                  <button class="btn grey small fake_trigger">2+</button>
                   <select class=""> 
                     <option selected="selected">1+</option>
                     <option >2+</option>
@@ -416,20 +442,32 @@
               </div>
             </section>
 
-            <section class="fs_section pad_top">
+            <section class="fs_section">
               <h5 class="fs_section_title">Preco</h5>
               <div class="fs_section_content">
                 <div class="fs_range_holder">
                   <input type="text" value="$0"> - <input type="text" value="$5.000.000">
                 </div>
+                <div class="noUiSlider horizontal connect">
+                  <a style="left: 30%;"><div></div></a>
+                  <a style="left: 70%;"><div></div></a>
+                  <input type="hidden" name="" value="0.00">
+                  <input type="hidden" name="" value="100.00">
+                </div>
               </div>
             </section>
 
-            <section class="fs_section pad_top">
+            <section class="fs_section">
               <h5 class="fs_section_title">Area util</h5>
               <div class="fs_section_content">
-                <div class="fs_range_holder short">
+                <div class="fs_range_holder">
                   <input type="text" value="60m2"> - <input type="text" value="180m2">
+                </div>
+                <div class="noUiSlider horizontal connect">
+                  <a style="left: 30%;"><div></div></a>
+                  <a style="left: 70%;"><div></div></a>
+                  <input type="hidden" name="" value="0.00">
+                  <input type="hidden" name="" value="100.00">
                 </div>
               </div>
             </section>
@@ -462,6 +500,40 @@
             <img src="img/fpo/ad_vertical_fpo.png" />
           </div>
           <!-- /.publicidad -->
+
+          <div class="grey_box featured_broker" data-location="BR&gt;Sao Paulo&gt;NULL&gt;Sao Paulo">
+            <h3 class="gb_title"><span>Imobiliária destacada</span><br/> São Paulo</h3>
+            <a class="fb_link" href="/39887/zona-leste-imoveis/" rel="nofollow">
+              <img class="fb_img" src="http://imgs.vivareal.com/7f1d0939a9974ba7fe1ff76f16f0297d.jpg" width="195" height="90">
+            </a>
+          </div>
+          <!-- /.grey_box .featured_broker -->
+
+          <div class="grey_box featured_city">
+            <img class="fc_img" src="img/fpo/ciudad_destadada_fpo.png" alt="São Paulo" width="218" height="115">
+            <h3 class="gb_title"><span>Veja também em</span><br/> São Paulo</h3>
+            <ul class="gb_content tag_cloud tag_stack" itemprop="significantLinks">
+              <li>
+                <a class="tc_tag" href="/aluguel/sp/sao-paulo/">Imóveis para alugar </a>
+              </li>
+              <li>
+                <a class="tc_tag" href="/venda/sp/sao-paulo/apartamento_residencial/">Apartamentos à venda</a>
+              </li>
+              <li>
+                <a class="tc_tag" href="/venda/sp/sao-paulo/casa_residencial/">Casas à venda</a>
+              </li>
+              <li>
+                <a class="tc_tag" href="/venda/sp/sao-paulo/lote-terreno_residencial/">Lotes/Terrenos à venda</a>
+              </li>
+              <li>
+                <a class="tc_tag" href="/venda/sp/sao-paulo/sobrado_residencial/">Sobrados à venda</a>
+              </li>
+            </ul>
+            <div class="gb_content">
+              <a class="btn grey mini" href="/sitemap/venda/sp/sao-paulo/">Veja todos os bairros de São Paulo</a>
+            </div>
+          </div>
+          <!-- /.grey_box .featured_city -->
 
         </aside>
         <!-- /.col .short -->

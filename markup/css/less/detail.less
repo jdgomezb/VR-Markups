@@ -27,223 +27,131 @@
   background: url(../../img/core/img-breadcrumb.png) center right no-repeat;
 }
 /* End Breadcrumb */
-/* NEXT -PREV */
-header .navWrapper {
-  background: @blueBG;
-  border-bottom: 1px solid @blueLine2;
-  height: 35px;
-  margin-bottom: 20px;
-  overflow: hidden;
-  text-align: center;
-  font-family: @Sans;
-}
-  header .navWrapper .wrapped {
-    padding-bottom: 0;
-  }
-  header .navWrapper nav {
-    float: right;
-    padding: 8px 12px 0 0;
-  }
-nav.propertyNav { 
-  background: rgb(255,255,255); /* Old browsers */
-  background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(247,247,247,1) 5%, rgba(247,247,247,1) 50%, rgba(247,247,247,1) 95%, rgba(255,255,255,1) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,1)), color-stop(5%,rgba(247,247,247,1)), color-stop(50%,rgba(247,247,247,1)), color-stop(95%,rgba(247,247,247,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(247,247,247,1) 5%,rgba(247,247,247,1) 50%,rgba(247,247,247,1) 95%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(247,247,247,1) 5%,rgba(247,247,247,1) 50%,rgba(247,247,247,1) 95%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(247,247,247,1) 5%,rgba(247,247,247,1) 50%,rgba(247,247,247,1) 95%,rgba(255,255,255,1) 100%); /* IE10+ */
-  background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(247,247,247,1) 5%,rgba(247,247,247,1) 50%,rgba(247,247,247,1) 95%,rgba(255,255,255,1) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
-  border: none;
-  margin: @margin 0 0 0;
-  padding: @margin;
+
+/* Project Info */
+.projectLogo {
+  border: 1px solid @grey;
+  box-shadow: 2px 2px 1px @greyLight;
+  float: right;
+  margin: 0 0 20px 20px;
   position: relative;
-  text-align: center;
+  max-width: 130px;
 }
-nav.propertyNav:before,
-nav.propertyNav:after {
-  background: rgb(255,255,255); /* Old browsers */
-  background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(230,230,230,1) 5%, rgba(230,230,230,1) 50%, rgba(230,230,230,1) 95%, rgba(255,255,255,1) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,1)), color-stop(5%,rgba(230,230,230,1)), color-stop(50%,rgba(230,230,230,1)), color-stop(95%,rgba(230,230,230,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(230,230,230,1) 5%,rgba(230,230,230,1) 50%,rgba(230,230,230,1) 95%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(230,230,230,1) 5%,rgba(230,230,230,1) 50%,rgba(230,230,230,1) 95%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(230,230,230,1) 5%,rgba(230,230,230,1) 50%,rgba(230,230,230,1) 95%,rgba(255,255,255,1) 100%); /* IE10+ */
-  background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(230,230,230,1) 5%,rgba(230,230,230,1) 50%,rgba(230,230,230,1) 95%,rgba(255,255,255,1) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
-  bottom: 0;
-  content: '';
-  left: 0;
-  height: 1px;
-  position: absolute;
-  width: 100%;
-}
-nav.propertyNav:after {
-  bottom: none;
-  top: 0;
-}
-header .locationRoute {
-  color: @blueFontLight;
-  font-family: @Serif;
-  font-size: 1em;
-  font-style: italic;
-  font-weight: 400;
+header hgroup {
+  /*float: left;
+  width: 640px;*/
   margin: 0;
-  padding-top: 10px;
-  text-align: left;
+  font-weight: bold;
+  .title-shadow;
 }
-  .locationRoute h4 {
-    float: left;
-    margin: 0 10px 0 0;
-  }
-  .locationRoute ul {
-    position: relative;
-  }
-    .locationRoute li {
-      float: left;
-      list-style: none;
-      margin: 0;
-      padding-right: 10px;
-    }
-
-  .locationRoute a,
-  .no-touch .locationRoute a:hover {
-    background: none;
-    color: @blueFontLight;
-    display: inline-block;
-    font-size: inherit;
-    padding: 0 10px 0 0;
-    text-decoration: underline;
-  }
-  .no-touch .locationRoute a:focus,
-  .no-touch .locationRoute a:hover {
-    color: darken(@blueFontLight, 10%);
-    text-decoration: none;
-  }
-
-  /* End NEXT -PREV */
-  /* Project Info */
-  .projectLogo {
-    border: 1px solid @grey;
-    box-shadow: 2px 2px 1px @greyLight;
-    float: right;
-    margin: 0 0 20px 20px;
-    position: relative;
-    max-width: 130px;
-  }
-  header hgroup {
-    /*float: left;
-    width: 640px;*/
-    margin: 0;
-    font-weight: bold;
-    .title-shadow;
-  }
-  header hgroup a {
-    color: @blueFont;
-    text-shadow: none;
-  }
-  .no-touch header hgroup a:hover {
-    color: darken(@blueFont, 30%);
-  }
-  header h1 {
-    font-family: @Sans;
-    font-size: 1.8em;
-    line-height: 25px;
-    margin: 0;
+header hgroup a {
+  color: @blueFont;
+  text-shadow: none;
+}
+.no-touch header hgroup a:hover {
+  color: darken(@blueFont, 30%);
+}
+header h1 {
+  font-family: @Sans;
+  font-size: 1.8em;
+  line-height: 25px;
+  margin: 0;
+  overflow: hidden;
+}
+  header h1 .extraInfo {
+    display: block;
+    font-family: @Serif;
+    font-size: .8em;
     overflow: hidden;
   }
-    header h1 .extraInfo {
-      display: block;
-      font-family: @Serif;
-      font-size: .8em;
-      overflow: hidden;
-    }
-    header h1 mark {
-      background: url(../../img/core/img-flag-dev-state-inv-2.png) no-repeat right top;
-      color: @white;
-      float: left;
-      font-size: 11px;
-      font-style: italic;
-      margin: 0 10px 10px 0;
-      padding: 0 20px 0 10px;
-      text-transform: capitalize;
-      text-shadow: none;
-    }
-    header h1 .developerName {
-      display: inline-block;
-      font-size: .8em;
-      font-style: italic;
-      margin-left: 10px;
-      white-space: nowrap;
-    }
-    header h1 .projectName {
-      
-    }
-      header h1 > strong {
-        display: inline-block;
-        border-right: 1px solid @black4;
-        font-size: 1.1em;
-        margin-right: 5px;
-        padding-right: 10px;
-      }
-  header .location {
-    background: url(../../img/core/icn-fixedbar-location2.png) left 2px no-repeat;
-    font-size: 1.2em;
-    margin: 0;
-    padding-left: 15px;
+  header h1 mark {
+    background: url(../../img/core/img-flag-dev-state-inv-2.png) no-repeat right top;
+    color: @white;
+    float: left;
+    font-size: 11px;
+    font-style: italic;
+    margin: 0 10px 10px 0;
+    padding: 0 20px 0 10px;
+    text-transform: capitalize;
+    text-shadow: none;
   }
-    header .location a {
-      font-style: italic;
-      font-weight: normal;
-      font-size: 0.92em;
-      padding-right: @marginBig;
-    }
-      header .location .no_arrow {
-        background: none;
-        padding: 0;
-      }
-  /* End Project Info */
-
-  /* Price Info */
-  .priceInfo {
-    float: right;
+  header h1 .developerName {
+    display: inline-block;
     font-size: .8em;
-    text-align: right;
-    .title-shadow;
-    /*width: 300px;*/
+    font-style: italic;
+    margin-left: 10px;
+    white-space: nowrap;
   }
-    .priceInfo p {
-      font-family: @Sans;
-      margin: 0;
+  header h1 .projectName {
+    
+  }
+    header h1 > strong {
+      display: inline-block;
+      border-right: 1px solid @black4;
+      font-size: 1.1em;
+      margin-right: 5px;
+      padding-right: 10px;
     }
-    .priceInfo mark {
+header .location {
+  background: url(../../img/core/icn-fixedbar-location2.png) left 2px no-repeat;
+  font-size: 1.2em;
+  margin: 0;
+  padding-left: 15px;
+}
+  header .location a {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 0.92em;
+    padding-right: @marginBig;
+  }
+    header .location .no_arrow {
       background: none;
-      color: white;
-      padding-bottom: 18px;
+      padding: 0;
     }
-    .priceInfo strong {
-      font-size: 1.45em;
+/* End Project Info */
+
+/* Price Info */
+.priceInfo {
+  float: right;
+  font-size: .8em;
+  text-align: right;
+  .title-shadow;
+  /*width: 300px;*/
+}
+  .priceInfo p {
+    font-family: @Sans;
+    margin: 0;
+  }
+  .priceInfo mark {
+    background: none;
+    color: white;
+    padding-bottom: 18px;
+  }
+  .priceInfo strong {
+    font-size: 1.45em;
+  }
+    .priceInfo strong span {
+      font-size: .7em;
     }
-      .priceInfo strong span {
-        font-size: .7em;
-      }
 /* End Price Info */
 
 /*  Layout */
-  .contentCol {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    float: left;
-    padding: 0 15px;
-    width: 640px;
-  }
-  .asideBar {
-    width: 300px;
-  }
-  .contentCol h2 {
-    color: #132C52;
-    font-family: @Serif;
-    font-size: 19px;
-    font-weight: 700;
-  }
+.contentCol {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  padding: 0 15px;
+  width: 640px;
+}
+.asideBar {
+  width: 300px;
+}
+.contentCol h2 {
+  color: #132C52;
+  font-family: @Serif;
+  font-size: 19px;
+  font-weight: 700;
+}
 /*  end Layout */
 
 
@@ -519,7 +427,7 @@ header .locationRoute {
   background: -webkit-linear-gradient(top,  #7ABB47 0%,#66A138 100%);
   background: -o-linear-gradient(top,  #7ABB47 0%,#66A138 100%);
   background: -ms-linear-gradient(top,  #7ABB47 0%,#66A138 100%);
-  background: linear-gradient(top,  #7ABB47 0%,#66A138 100%);
+  background: linear-gradient(to bottom,  #7ABB47 0%,#66A138 100%);
   border: 1px solid #8CCA54;
   box-shadow: 0 0 3px #53832F;
   display: block;
