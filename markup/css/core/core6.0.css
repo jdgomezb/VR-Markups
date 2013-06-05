@@ -8594,6 +8594,10 @@ header .location .no_arrow {
   font-weight: 700;
   line-height: .9em;
 }
+.search_description .sd_no_results strong {
+  font-size: 3.1em;
+  font-weight: 400;
+}
 .search_actions {
   position: absolute;
   right: 10px;
@@ -8876,11 +8880,11 @@ header .location .no_arrow {
 .listProperties .contentTabs .currentSection:after {
   background-color: #e9e9e9;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#e9e9e9), to(#ffffff));
-  background-image: -webkit-linear-gradient(top, #e9e9e9 10%, #ffffff 30%);
-  background-image: -moz-linear-gradient(top, #e9e9e9 10%, #ffffff 30%);
-  background-image: -ms-linear-gradient(top, #e9e9e9 10%, #ffffff 30%);
-  background-image: -o-linear-gradient(top, #e9e9e9 10%, #ffffff 30%);
-  background-image: linear-gradient(to bottom, #e9e9e9 10%, #ffffff 30%);
+  background-image: -webkit-linear-gradient(top, #e9e9e9 120px, #ffffff 240px);
+  background-image: -moz-linear-gradient(top, #e9e9e9 120px, #ffffff 240px);
+  background-image: -ms-linear-gradient(top, #e9e9e9 120px, #ffffff 240px);
+  background-image: -o-linear-gradient(top, #e9e9e9 120px, #ffffff 240px);
+  background-image: linear-gradient(to bottom, #e9e9e9 120px, #ffffff 240px);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e9e9e9, endColorstr=#e9e9e9);
   content: " ";
   height: 100%;
@@ -8973,6 +8977,39 @@ header .location .no_arrow {
 }
 .properties_list .pl_recap .pl_r_actions .btn {
   margin-bottom: 5px;
+}
+.properties_list .pl_nr_title {
+  font-size: 1.65em;
+  font-weight: 400;
+  text-align: center;
+}
+.properties_list .pl_nr_message {
+  font-family: 'Droid Sans', Arial, sans-serif;
+  font-size: 1.25em;
+  position: relative;
+  text-align: center;
+}
+.properties_list .pl_nr_message:before {
+  background: url(../../img/core/img_dottedarrow_left.png) no-repeat 0 0;
+  content: "";
+  height: 21px;
+  left: 0;
+  margin-top: -11px;
+  position: absolute;
+  top: 50%;
+  width: 101px;
+}
+.properties_list .pl_nr_or {
+  color: #b6b6b6;
+  padding: 0 10px;
+}
+.properties_list .pl_nr_or:before,
+.properties_list .pl_nr_or:after {
+  content: " - ";
+}
+.pl_no_results {
+  font-family: 'Droid Sans', Arial, sans-serif;
+  list-style: none;
 }
 .listing_unit {
   color: #666666;
@@ -9165,7 +9202,7 @@ header .location .no_arrow {
   background-repeat: no-repeat;
   content: "";
   height: 12px;
-  left: 13px;
+  left: 10px;
   position: absolute;
   top: 10px;
   width: 17px;
