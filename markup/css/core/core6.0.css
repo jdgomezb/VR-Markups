@@ -833,8 +833,28 @@ input[type="submit"],
   -webkit-box-shadow: inset 0 0 2px rgba(130, 195, 0, 0.7);
   -moz-box-shadow: inset 0 0 2px rgba(130, 195, 0, 0.7);
   box-shadow: inset 0 0 2px rgba(130, 195, 0, 0.7);
-  text-shadow: 0 -1px 0 rgba(60, 102, 28, 0.8);
   color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(60, 102, 28, 0.8);
+}
+.btn.lightGreen {
+  background-color: #dbffba;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dbffba), to(#d2ffab));
+  background-image: -webkit-linear-gradient(top, #dbffba 0%, #d2ffab 100%);
+  background-image: -moz-linear-gradient(top, #dbffba 0%, #d2ffab 100%);
+  background-image: -ms-linear-gradient(top, #dbffba 0%, #d2ffab 100%);
+  background-image: -o-linear-gradient(top, #dbffba 0%, #d2ffab 100%);
+  background-image: linear-gradient(to bottom, #dbffba 0%, #d2ffab 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#dbffba, endColorstr=#dbffba);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 1px 1px 0 #689F3B;
+  -moz-box-shadow: 1px 1px 0 #689F3B;
+  box-shadow: 1px 1px 0 #689F3B;
+  color: #65963A;
 }
 .btn.lightGreen {
   background-color: #dbffba;
@@ -877,8 +897,8 @@ input[type="submit"],
   -webkit-box-shadow: inset 0 0 2px rgba(64, 96, 129, 0.7);
   -moz-box-shadow: inset 0 0 2px rgba(64, 96, 129, 0.7);
   box-shadow: inset 0 0 2px rgba(64, 96, 129, 0.7);
-  text-shadow: 0 -1px 0 rgba(64, 96, 129, 0.7);
   color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(64, 96, 129, 0.7);
 }
 .btn.lightBlue {
   background-color: #bae8ff;
@@ -977,6 +997,7 @@ input[type="submit"],
   font-size: .9em;
   font-weight: 400;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  padding: 8px 12px;
 }
 .btn.dark {
   background-color: #54534b;
@@ -994,8 +1015,8 @@ input[type="submit"],
   -moz-border-radius: 3px;
   border-radius: 3px;
   border: 1px solid #363532;
-  text-shadow: 0 -1px 0 rgba(67, 67, 67, 0.7);
   color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(67, 67, 67, 0.7);
 }
 .btn.orange,
 .btn:focus,
@@ -1534,11 +1555,11 @@ header .btnNext:after {
 .btn.btnGoToUnits,
 .btn.btnGoToUnits:focus,
 .btn.btnGoToUnits:hover {
-  padding: 5px 25px 5px 10px;
+  padding-right: 25px;
 }
 .btn.btnGoToUnits:after {
   background: url(../../img/core/btn-anchor-down-dark2.png) no-repeat top left;
-  bottom: 5px;
+  bottom: 7px;
   content: '';
   height: 11px;
   position: absolute;
@@ -1548,8 +1569,17 @@ header .btnNext:after {
 .no-touch .btnGoToUnits:hover:after {
   background-position: bottom left;
 }
+.btn.lightGreen.btnGoToUnits:focus,
+.no-touch .btn.lightGreen.btnGoToUnits:hover {
+  padding-right: 25px;
+}
 .btn.lightGreen.btnGoToUnits:after {
   background-image: url(../../img/core/btn-anchor-down-green.png);
+}
+.btn.lightGreen.btnGoToUnits:focus:after,
+.no-touch .btn.lightGreen.btnGoToUnits:hover:after {
+  bottom: 6px;
+  right: 6px;
 }
 .btn.clickToCall,
 .btn.onlineChat,
@@ -1602,7 +1632,13 @@ aside .btn.blue.createNotification {
   top: 50%;
 }
 .greyDark.onlineChat:before {
-  background-image: url(../../img/core/icn-chat_v2.png);
+  background-image: url(../../img/core/icn-chat_v3.png);
+  background-position: 0 0;
+  margin-top: -10px;
+}
+.greyDark.onlineChat:focus:before,
+.no-touch .greyDark.onlineChat:hover:before {
+  background-position: 0 100%;
 }
 .btn.clickToCall:before {
   background-image: url(../../img/core/icn-call.png);
@@ -1612,9 +1648,20 @@ aside .btn.blue.createNotification {
 }
 .btnToolTel:before {
   background: url(../../img/core/icn-tool-view-tel2.png) no-repeat bottom;
-  top: 2px;
   left: 7px;
+  top: 2px;
   width: 25px;
+}
+.pastelBlue.btnToolTel:before {
+  background: url(../../img/core/icn-call-pastelBlue.png) no-repeat 0 0;
+  height: 16px;
+  left: 9px;
+  top: 5px;
+  width: 15px;
+}
+.pastelBlue.btnToolTel:focus:before,
+.no-touch .pastelBlue.btnToolTel:hover:before {
+  background-position: 0 100%;
 }
 .btn.createNotification:before {
   background-image: url(../../img/core/icn-notify.png);
@@ -1962,8 +2009,13 @@ small.mandatory {
   padding: 7px;
 }
 .inputWrapper textarea {
-  height: 76px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100px;
   padding: 10px;
+}
+#contactFormBottom .inputWrapper textarea {
+  height: 167px;
 }
 .inputWrapper.name,
 .inputWrapper.pass,
@@ -2226,6 +2278,7 @@ form .errorMsg {
 }
 .contactForm .btnSet.secondary .btn {
   float: right;
+  font-size: .9em;
 }
 .inputWrapperTel,
 .inputWrapperDDD {
@@ -2511,8 +2564,9 @@ aside .contactForm .optOut input {
   color: #666666;
 }
 #mortgageForm {
-  position: relative;
+  float: right;
   margin-top: -15px;
+  position: relative;
 }
 #mortgageForm > div {
   color: #62a0bc;
@@ -2560,14 +2614,14 @@ aside .contactForm .optOut input {
 }
 #mortgageForm .mortageContent {
   background-color: #ffffff;
-  display: none;
   border: 1px solid #cccccc;
-  top: 27px;
-  right: 0;
+  display: none;
   box-shadow: 2px 2px 0 rgba(102, 102, 102, 0.6);
-  max-width: 314px;
   margin-top: -1px;
+  right: 0;
   position: absolute;
+  top: 27px;
+  width: 314px;
   z-index: 1;
 }
 #mortgageForm h2 {
@@ -5989,6 +6043,29 @@ header .locationRoute {
 .theme_green .locationRoute a {
   color: #D9FFDA;
 }
+.theme_green header .location {
+  background: none;
+  padding-left: 0;
+}
+.theme_green header hgroup a {
+  color: #417201;
+}
+.theme_green #mortgageForm > div {
+  color: #417201;
+}
+.theme_green #mortgageForm > div a {
+  color: #ffffff;
+}
+.theme_green .btnMortgage span {
+  background-image: url(../../img/core/icn_calc_lightgreen.png);
+}
+.theme_green .unitTypesGallery {
+  border-color: #86BC5C;
+}
+.theme_green .unitTypesGallery header {
+  background-image: url(../../img/core/bg-unit-view-header-green.jpg);
+  border-color: #86BC5C;
+}
 .theme_green .locationRoute a:focus,
 .no-touch .theme_green .locationRoute a:hover {
   color: #ffffff;
@@ -6924,11 +7001,11 @@ header .location .no_arrow {
   position: relative;
   float: right;
 }
-.contactForm .btnToolTel {
+.asideBar .contactForm .btnToolTel {
   margin-right: 5px;
   padding: 5px 12px !important;
 }
-.contactForm .btnToolTel:before {
+.asideBar .contactForm .btnToolTel:before {
   background: none;
 }
 .asideBar .contactForm .btnSet .btn {
@@ -7812,7 +7889,7 @@ header .location .no_arrow {
   width: 980px;
 }
 #fixedBar p {
-  float: left;
+  float: right;
   font-family: 'Droid Sans', Arial, sans-serif;
   line-height: 19px;
   margin: 0;
@@ -7827,7 +7904,7 @@ header .location .no_arrow {
 }
 #fixedBar .btnSet {
   clear: none;
-  float: right;
+  float: left;
 }
 #fixedBar .btnSet li {
   float: right;
@@ -7840,12 +7917,6 @@ header .location .no_arrow {
 #fixedBar .btnSet .btn {
   font-size: 12px;
   font-weight: 400;
-}
-#fixedBar .btnSet .btnToolTel {
-  padding-left: 12px !important;
-}
-#fixedBar .btnSet .btnToolTel:before {
-  background: none;
 }
 /* fullscreen en detalle de usado */
 .blockPage .fullScreenMsg {
@@ -8600,7 +8671,7 @@ header .location .no_arrow {
 }
 .search_actions {
   position: absolute;
-  right: 10px;
+  right: 0;
   text-align: right;
   top: 0;
   width: 200px;

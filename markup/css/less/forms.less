@@ -75,8 +75,13 @@ small.mandatory {
   padding: 7px;
 }
 .inputWrapper textarea {
-  height: 76px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100px;
   padding:@margin;
+}
+#contactFormBottom .inputWrapper textarea {
+  height: 167px;
 }
 .inputWrapper.name,
 .inputWrapper.pass,
@@ -327,6 +332,7 @@ form .errorMsg {
   }
     .contactForm .btnSet.secondary .btn {
       float: right;
+      font-size: .9em;
     }
 .inputWrapperTel,
 .inputWrapperDDD {
@@ -626,8 +632,9 @@ aside .contactForm .optOut {
 
 //FINANCIAMENTO (MORTGAGE)
 #mortgageForm {
-  position: relative;
+  float: right;
   margin-top: -15px;
+  position: relative;
 }
   #mortgageForm > div {
     color: @blueLine;
@@ -673,14 +680,14 @@ aside .contactForm .optOut {
     }
   #mortgageForm .mortageContent {
     background-color: @white;
-    display: none;
     border: 1px solid @grey;
-    top: 27px;
-    right: 0;
+    display: none;
     box-shadow: 2px 2px 0 fadeout(@black3, 40%);
-    max-width: 314px;
     margin-top: -1px;
+    right: 0;
     position: absolute;
+    top: 27px;
+    width: 314px;
     z-index: 1;
   }
   #mortgageForm h2 {
