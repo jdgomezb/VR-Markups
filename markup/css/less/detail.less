@@ -988,70 +988,117 @@ header .location {
 /* @group TOOLTIP POPUP */
 .tooltipPop {
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
+       box-sizing: border-box;
   background: @white;
   border: 1px solid @black4;
-  box-shadow: 3px 3px 0 rgba(0,0,0,0.15);
+  box-shadow: 2px 2px 0 rgba(0,0,0,.2);
+  color: @greyFontlight;
   display: none;
-  left: -230px;
+  left: -325px;
   margin: 0;
-  width: 225px;
   padding: 10px;
   position: absolute;
-  text-align: left;
   top: 0;
+  width: 320px;
   z-index: 90;
+
+  &:before,
+  &:after {
+    border-style: solid;
+    border-width: 7px 0 7px 7px;
+    border-color: transparent transparent transparent rgba(0,0,0,.2);
+    content: '';
+    height: 0;
+    margin: 3px -11px 0 0;
+    right: 0;
+    position: absolute;
+    top: 5px;
+    width: 0;
+  }
+  &:before {
+    background: url(../../img/core/img-tooltip-arrow.png) left top no-repeat;
+    border: none;
+    height: 17px;
+    margin: 0 -8px 0 0;
+    width: 8px;
+    z-index: 5;
+  }
+
+  .tt_title {
+    display: block;
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: @margin;
+    text-align: center;
+  }
+
+  .tt_phone {
+    color: @greyFontDark;
+    display: block;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: @margin;
+    text-align: center;
+  }
+
+  .propertyID_info {
+    color: @greyFontlighter;
+    font-size: 11px;
+    margin: 0 0 @margin;
+    text-align: center;
+  }
+
+  .extra_info {
+    background-color: @greyLighter;
+    border-top: 1px dotted @greyDark;
+    color: @greyFontlighter2;
+    font-size: 11px;
+    font-style: italic;
+    margin: 5px -10px -10px -10px;
+    padding: 5px 40px;
+    position: relative;
+    text-align: center;
+  }
+
+  .orText {
+    display: none;
+  }
+
+  .notification {
+    background: @errorBG;
+    border-bottom: 1px solid @errorLine;
+    color: @orangeDark;
+    line-height: 24px;
+    left: 0;
+    font-size: 11px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+  }
+
+  .btn {
+    float: left;
+  }
 }
-.tooltipPop:before,
-.tooltipPop:after {
-  border-style: solid;
-  border-width: 7px 0 7px 7px;
-  border-color: transparent transparent transparent rgba(0,0,0,0.15);
-  content: '';
-  height: 0;
-  position: absolute;
-  top: 20%;
-  margin: -4px -11px 0 0;
-  right: 0;
-  width: 0;
+
+.fix_right .tooltipPop {
+  left: 120px;
+
+  &:before,
+  &:after {
+    border-width: 7px 7px 7px 0;
+    border-color: transparent rgba(0,0,0,.2) transparent transparent;
+    left: -8px;
+    margin: 5px 0 0 0;
+  }
+  &:before {
+    background-image: url(../../img/core/img-tooltip-arrow-left.png);
+    margin: 0;
+  }
 }
-.tooltipPop:before {
-  background: url(../../img/core/img-tooltip-arrow.png) left top no-repeat;
-  border: none;
-  height: 17px;
-  margin: -7px -8px 0 0;
-  width: 8px;
-  z-index: 5;
-}
-.tooltipPop em {
-  color: @greyFontlighter;
-  display: block;
-  font-size: 13px;
-}
-.tooltipPop strong {
-  color: @greyFontDark;
-  font-size: 20px;
-  font-style: italic;
-  font-weight: 400;
-}
-.tooltipPop .orText {
-  display: none;
-}
-.tooltipPop .notification {
-  background: @errorBG;
-  border-bottom: 1px solid @errorLine;
-  color: @orangeDark;
-  line-height: 24px;
-  left: 0;
-  font-size: 11px;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  width: 100%;
-}
-.tooltipPop .btn {
-  float: left;
-}
+
 /* @group Characteristics */
 .developContentTabs {
   margin: 0 0 @margin*2;
@@ -1544,18 +1591,19 @@ header .location {
   z-index: 95;
 }
 #fixedBar > .wrapped {
-  padding-left: 10px;
-  width: 980px;
+  padding: 0;
+  width: 995px;
 }
-#fixedBar p {
+#fixedBar .infoProperty {
   float: right;
   font-family: @Sans;
   line-height: 19px;
   margin: 0;
   overflow: hidden;
-  padding: 5px 5px 0 0;
+  padding: 5px 0 0 0;
+  text-align: right;
   text-overflow: ellipsis;
-  width: 585px;
+  width: 580px;
   white-space: nowrap;
 }
 #fixedBar .infoPrice {
@@ -1566,12 +1614,9 @@ header .location {
   float: left;
 }
   #fixedBar .btnSet li {
-    float: right;
+    float: left;
     margin: 0 5px 0 0;
     padding: 0;
-  }
-  #fixedBar .btnSet li:first-child {
-    margin: 0;
   }
   #fixedBar .btnSet .btn {
     font-size: 12px;

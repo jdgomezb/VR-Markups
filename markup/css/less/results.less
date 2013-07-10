@@ -947,6 +947,14 @@
   padding: 20px 15px 20px 20px;
   position: relative;
 
+  * {
+    -webkit-transition: none;
+       -moz-transition: none;
+        -ms-transition: none;
+         -o-transition: none;
+            transition: none;
+  }
+
   &:before,
   &:after {
     .gradient(@greyLight, @white, 50%, 90%);
@@ -980,6 +988,18 @@
     width: 66%;
   }
 
+  .lu_pre_title {
+    display: block;
+    font-family: @Serif;
+    font-style: italic;
+    font-size: .6em;
+
+    &:before,
+    &:after {
+      content: " - ";
+    }
+  }
+
   .lu_title {
     color: @greyFont;
     font-size: 1.65em;
@@ -989,9 +1009,16 @@
       color: @greyFont;
     }
   }
+  
+  .lu_pre_price {
+    display: block;
+    font-size: .5em;
+    font-weight: 400;
+  }
 
   .lu_price {
     float: right;
+    text-align: right;
 
     .lu_p_currency {
       font-size: .85em;
@@ -1022,6 +1049,7 @@
   }
 
   .lu_broker_logo {
+    background-color: @white;
     border: 1px solid @greyLight2;
     color: @greyFontlighter;
     float: right;
@@ -1098,8 +1126,23 @@
     }
 
     .lu_iw_state {
-      display: none;
+      background: url(../../img/core/img_flag_dev.png) no-repeat 100% 0;
+      color: @white;
+      font: italic .85em @Serif;
+      height: 24px;
+      left: 0;
+      padding: 5px 25px 0 10px;
       position: absolute;
+      top: -3px;
+    }
+    .lu_iw_state:before {
+      background: url(../../img/core/img_flag_dev.png) no-repeat 0 0;
+      content: "";
+      height: 24px;
+      left: -4px;
+      position: absolute;
+      top: 0;
+      width: 5px;
     }
 
     .lu_iw_count {
@@ -1143,6 +1186,30 @@
     }
 
   }
+}
+
+.no-touch .listing_unit:hover {
+  background-color: #FFFBEB;
+  border-top-color: #FAB400;
+
+  &:before,
+  &:after {
+    .gradient(#FAB400, @white, 50%, 90%);
+  }
+
+  .lu_title {
+    color: #E79B07;
+  }
+
+  .lu_iw_thumbnail {
+    border-color: #FAB400;
+  }
+
+}
+
+.listing_unit .lu_title a:focus,
+.no-touch .listing_unit .lu_title a:hover {
+  text-decoration: none;
 }
 
 .listing_unit.removed {
